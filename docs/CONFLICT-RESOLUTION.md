@@ -1,7 +1,7 @@
 # PlantMind — Intelligent Merge Conflict Resolution
-**Date:** 2026-06-29 | **Canonical workspace:** PlantMind-Live
+**Date:** 2026-06-29 | **Canonical workspace:** PlantMind
 
-This document records how conflicts between `PlantMind/` (v1 FORGE) and `PlantMind_hckthn/` (v2 vault) were resolved. **Nothing was deleted** from source folders; all assets were copied into PlantMind-Live.
+This document records how conflicts between `PlantMind/` (v1 FORGE) and `PlantMind_hckthn/` (v2 vault) were resolved. **Nothing was deleted** from source folders; all assets were copied into PlantMind.
 
 ---
 
@@ -49,7 +49,7 @@ This document records how conflicts between `PlantMind/` (v1 FORGE) and `PlantMi
 | PlantMind/Knowledge Graph | knowledge/obsidian-vault | ✅ Copied |
 | PlantMind deliverables (pptx, pdf, svg) | docs/deliverables | ✅ Copied |
 
-**Total files in PlantMind-Live after merge:** 246+
+**Total files in PlantMind after merge:** 246+
 
 ---
 

@@ -62,7 +62,7 @@ def build():
     tbl(doc, ["Question", "Answer"], [
         ("What is it?", "Physics-Informed Engineering Intelligence + Götze Decision Engine"),
         ("What is it NOT?", "Not a chatbot, not a dashboard-only tool, not three projects"),
-        ("Workspace", r"C:\Users\hp\Claude\Projects\PlantMind-Live"),
+        ("Workspace", r"C:\Users\hp\Claude\Projects\PlantMind"),
         ("Event", "LTTS Global EI Hackathon · 9 July 2026 · 24h · 4 members"),
         ("Tagline", "Predict the failure. Decide the fix. Prove it."),
     ])
@@ -217,7 +217,7 @@ def build():
     doc.add_paragraph(
         "You chose the RIGHT project for LTTS EI hackathon. Risk is execution clarity, not the idea."
     )
-    doc.add_paragraph("Maximum win path: PlantMind-Live only → demo forge-v1 → pitch v2 vision → rehearse.")
+    doc.add_paragraph("Maximum win path: PlantMind only → demo forge-v1 → pitch v2 vision → rehearse.")
 
     h(doc, "PART 7 — Multi-AI Operating System", 1)
     tbl(doc, ["Tool", "Entry file", "Session start"], [
@@ -231,7 +231,7 @@ def build():
 
     h(doc, "Appendix — Commands", 1)
     cmds = [
-        r'cd "C:\Users\hp\Claude\Projects\PlantMind-Live"',
+        r'cd "C:\Users\hp\Claude\Projects\PlantMind"',
         r".\scripts\start-session.ps1",
         r"streamlit run src\legacy\forge-v1\app.py",
         r"uvicorn src.api.main:app --reload",

@@ -1,12 +1,12 @@
-# PlantMind-Live — Session Start Script
+# PlantMind — Session Start Script
 # Run at the beginning of every work session (any AI tool)
 
-$Root = "C:\Users\hp\Claude\Projects\PlantMind-Live"
+$Root = "C:\Users\hp\Claude\Projects\PlantMind"
 Set-Location $Root
 
 Write-Host ""
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "  PlantMind-Live — Session Start" -ForegroundColor Cyan
+Write-Host "  PlantMind — Session Start" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "Workspace: $Root" -ForegroundColor Green
 Write-Host ""

@@ -72,7 +72,7 @@ Dashboard **never** imports physics internals — only calls API or reads contra
 
 | Don't | Do instead |
 |---|---|
-| Work in `PlantMind/` or `PlantMind_hckthn/` for new code | Work in `PlantMind-Live/src/` |
+| Work in `_archive/` for new code | Work in `PlantMind/src/` |
 | Keep next steps in Chat Context | Keep next steps only in `ROADMAP.md` |
 | Add model API keys in code | Register in `ops/MODEL-REGISTRY.md` + `.env` |
 | Change schemas without vault update | Update `LOCKED_STATE` + `src/contracts/` together |

@@ -1,4 +1,4 @@
-# Claude Rules — PlantMind-Live
+# Claude Rules — PlantMind
 
 ## UNIVERSAL (project-continuity)
 
@@ -24,7 +24,7 @@ Append-only version files.
 ## PROJECT-SPECIFIC
 
 ### R1 — Single workspace
-All new writes go to `PlantMind-Live/`. Old folders are read-only archives unless migrating per `MIGRATION-MAP.md`.
+All new writes go to `PlantMind/`. Old folders are read-only archives unless migrating per `MIGRATION-MAP.md`.
 
 ### R2 — Lane discipline
 One chat = one lane (`ops/prompts/lanes/`). Do not cross lane internals.

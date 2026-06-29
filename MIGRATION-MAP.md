@@ -1,4 +1,6 @@
-# Migration Map — old folders → PlantMind-Live
+# Migration Map — archives → PlantMind (active)
+
+> **Completed 2026-06-29.** Archives at `_archive/PlantMind/`.
 
 > Absorb, don't duplicate. Old folders become **read-only archives** once content is migrated.
 
@@ -21,7 +23,7 @@ flowchart TB
         H3[5 lane prompts]
         H4[Master research prompt]
     end
-    subgraph LIVE["PlantMind-Live (WORK HERE)"]
+    subgraph LIVE["PlantMind (WORK HERE)"]
         L1[src/]
         L2[docs/]
         L3[ops/]
@@ -79,4 +81,4 @@ flowchart TB
 Keep `PlantMind/` and `PlantMind_hckthn/` until:
 - [ ] v1 demo runs from `src/dashboard/` OR hackathon ships from FORGE with Live as control plane
 - [ ] All LOCKED_STATE contracts exist in `src/contracts/`
-- [ ] Git remote set on PlantMind-Live
+- [ ] Git remote set on PlantMind

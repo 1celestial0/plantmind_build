@@ -127,7 +127,7 @@ From LTTS hackathon framing (COO Mritunjay Singh) and industry patterns:
 You chose a **strong, well-researched, strategically aligned project**. The risk is not the idea — it is **execution clarity**: two architectures, three folders (now merged), and trying to build v2 while v1 already wins the demo story.
 
 **Maximum win probability path:**
-1. Work only in `PlantMind-Live`
+1. Work only in `PlantMind`
 2. Demo from `src/legacy/forge-v1`
 3. Pitch the v2 vision (5 agents, IIS, approve) as the production roadmap
 4. Rehearse until boring

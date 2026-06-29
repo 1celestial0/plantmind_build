@@ -1,4 +1,4 @@
-# PlantMind-Live
+# PlantMind
 
 **Single canonical project folder.** All work happens here.  
 **Multi-AI rules:** See `AI-OPERATING-SYSTEM.md` (Claude + Grok + Gemini share this folder).

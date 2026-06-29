@@ -1,7 +1,7 @@
-# PlantMind-Live — START HERE (only entry point)
+# PlantMind — START HERE (only entry point)
 
 > **One folder. One truth. One next step.**  
-> Path: `C:\Users\hp\Claude\Projects\PlantMind-Live`  
+> Path: `C:\Users\hp\Claude\Projects\PlantMind`  
 > Last updated: 2026-06-29
 
 ---
@@ -10,22 +10,25 @@
 
 | Question | Answer |
 |---|---|
-| **Where do I work?** | Always this folder: `PlantMind-Live` |
+| **Where do I work?** | Always this folder: `PlantMind` |
 | **What do I read first?** | This file → `LOCKED_STATE.md` → `ROADMAP.md` (NOW section) |
-| **Where is the code?** | `src/` (new) · v1 salvage lives in `PlantMind/FORGE/` until migrated |
+| **Where is the code?** | `src/` (build v2 here) · v1 runnable demo: `src/legacy/forge-v1/` |
 | **Where are prompts?** | `ops/prompts/` |
 | **Where is research?** | `docs/research/` |
 | **How do I end a session?** | Say **"close session"** → updates `Chat Context/`, `ROADMAP.md`, git commit |
 
-**Old folders are archives, not workspaces:**
-- `PlantMind/` — v1 source (copied into Live; do not write there)
-- `PlantMind_hckthn/` — vault source (copied into Live; do not write there)
+**Archives (read-only):** `_archive/PlantMind/20260629_snapshot-*`  
+**New projects:** copy `_ProjectOS/` → `Projects\{NewName}/`
 
-**Handover documents (CEO → engineer):**
-- `docs/CONSOLIDATED-PROJECT-BLUEPRINT.md` — master spec (single source)
-- `docs/deliverables/PlantMind_Complete_Project_Blueprint.docx` — Word handover
+**Share with team / management:**
+- `docs/deliverables/PlantMind_Ultra_Implementation_Team_Guide.docx` — **give this to engineers + TL**
+- `docs/IMPLEMENTATION-GUIDE-ULTRA.md` — same content (Markdown)
+- `docs/WIN-STRATEGY-ASSESSMENT.md` — honest win probability (no false guarantees)
+- `docs/deliverables/PlantMind_Complete_Project_Blueprint.docx` — executive blueprint
 - `docs/deliverables/PlantMind_Complete_Handover_Deck.pptx` — presentation
-- `docs/CONFLICT-RESOLUTION.md` — how v1/v2 conflicts were resolved
+- `AI-OPERATING-SYSTEM.md` — Claude + Grok + Gemini rules (one folder)
+
+**Multi-AI setup:** `AGENTS.md` (Grok) · `GEMINI.md` (Gemini) · `CLAUDE.md` (Claude)
 
 See `MIGRATION-MAP.md` for the full old → new map.
 
@@ -34,7 +37,7 @@ See `MIGRATION-MAP.md` for the full old → new map.
 ## The 5 zones (mental model)
 
 ```
-PlantMind-Live/
+PlantMind/
 │
 ├── 🧭 ROOT (you are here)     LOCKED_STATE · ROADMAP · Chat Context
 │
@@ -88,7 +91,7 @@ Full routing table: `ops/ROUTING.md`
 ## Session ritual (every time)
 
 ### START (2 minutes)
-1. Open `PlantMind-Live` in your editor / terminal
+1. Open `PlantMind` in your editor / terminal
 2. AI reads: `LOCKED_STATE.md` → latest `Chat Context/` → `ROADMAP.md`
 3. AI tells you: **top 3 NOW items** — you pick one
 
@@ -135,7 +138,7 @@ Data → Physics → Agents → API → Dashboard
 
 | | v1 (built) | v2 (target) |
 |---|---|---|
-| Location | `../PlantMind/FORGE/` | `src/` here |
+| Location | `src/legacy/forge-v1/` | `src/` here |
 | Model | 5 layers, MetaGPT, G-score | 5 agents, IIS, Weibull |
 | Demo | Streamlit RED→GREEN | 5-agent + human approve |
 | Status | **Runnable today** | **Scaffolded, migrate incrementally** |
@@ -148,13 +151,15 @@ Data → Physics → Agents → API → Dashboard
 
 ```powershell
 # Always start here
-cd "C:\Users\hp\Claude\Projects\PlantMind-Live"
+cd "C:\Users\hp\Claude\Projects\PlantMind"
 
 # Run v1 demo (until src/dashboard is wired)
-cd "C:\Users\hp\Claude\Projects\PlantMind"
-streamlit run FORGE/app.py
+streamlit run src\legacy\forge-v1\app.py
 
-# Future: run v2 from Live root
+# Session start (any AI tool)
+.\scripts\start-session.ps1
+
+# Future v2:
 # streamlit run src/dashboard/app.py
 # uvicorn src.api.main:app --reload
 ```

@@ -10,10 +10,10 @@ streamlit run FORGE/app.py
 
 **Tabs:** Decision · Proof Chart · Fleet View · Agent Trace
 
-## v2 (target — from PlantMind-Live)
+## v2 (target — from PlantMind)
 
 ```powershell
-cd "C:\Users\hp\Claude\Projects\PlantMind-Live"
+cd "C:\Users\hp\Claude\Projects\PlantMind"
 # streamlit run src/dashboard/app.py   # when wired
 # uvicorn src.api.main:app --reload    # when API ready
 ```

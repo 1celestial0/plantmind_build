@@ -3,7 +3,7 @@
 **Version:** 1.0 Consolidated | **Date:** 29 June 2026  
 **Owner:** Sourav Dutta, Senior Data Engineer, LTTS  
 **Event:** LTTS Global Engineering Intelligence Hackathon — 9 July 2026  
-**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind-Live`
+**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind`
 
 ---
 
@@ -155,7 +155,7 @@ PlantMind has **three complementary views** of one product — not three product
               [Immutable Audit Log]
 ```
 
-## 4.3 Module folder map (PlantMind-Live)
+## 4.3 Module folder map (PlantMind)
 
 | Module | Path |
 |---|---|
@@ -408,7 +408,7 @@ Pump health drifts → crosses threshold → 5 agents fire → **"reduce load + 
 ## 10.4 v1 demo (available today)
 
 ```powershell
-cd C:\Users\hp\Claude\Projects\PlantMind-Live\src\legacy\forge-v1
+cd C:\Users\hp\Claude\Projects\PlantMind\src\legacy\forge-v1
 streamlit run app.py
 ```
 
@@ -539,7 +539,7 @@ Value = (failures_prevented) × (avg_downtime_hours) × (cost_per_hour) − inte
 
 | Question | Answer |
 |---|---|
-| Where to work? | `PlantMind-Live` only |
+| Where to work? | `PlantMind` only |
 | What to read first? | `00-START-HERE.md` |
 | What's locked? | `LOCKED_STATE.md` |
 | What's next? | `ROADMAP.md` NOW |
@@ -553,7 +553,7 @@ Value = (failures_prevented) × (avg_downtime_hours) × (cost_per_hour) − inte
 |---|---|---|
 | v1 | PlantMind/FORGE → `src/legacy/forge-v1/` | Runnable reference |
 | v2 vault | PlantMind_hckthn → `docs/architecture/` | Locked specification |
-| Live | PlantMind-Live | **Canonical workspace** |
+| Live | PlantMind | **Canonical workspace** |
 
 ---
 

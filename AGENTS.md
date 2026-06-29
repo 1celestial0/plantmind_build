@@ -1,6 +1,6 @@
-# PlantMind-Live — Grok / Agent Instructions
+# PlantMind — Grok / Agent Instructions
 
-**Canonical workspace:** `C:\Users\hp\Claude\Projects\PlantMind-Live`  
+**Canonical workspace:** `C:\Users\hp\Claude\Projects\PlantMind`  
 **Read first:** `AI-OPERATING-SYSTEM.md` → `00-START-HERE.md` → `LOCKED_STATE.md` → `ROADMAP.md`
 
 ## Session start

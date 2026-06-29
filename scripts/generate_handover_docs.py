@@ -70,7 +70,7 @@ def build_word_doc():
     meta.add_run(
         "LTTS Global Engineering Intelligence Hackathon · 9 July 2026\n"
         "Owner: Sourav Dutta · LTTS\n"
-        "Workspace: PlantMind-Live\n"
+        "Workspace: PlantMind\n"
         "Date: 29 June 2026"
     )
     doc.add_page_break()
@@ -306,7 +306,7 @@ def build_word_doc():
         ("No approval vs required", "Human approval required in v2"),
     ])
     doc.add_paragraph("Full matrix: docs/CONFLICT-RESOLUTION.md")
-    doc.add_paragraph("Nothing deleted from source folders. 246+ files in PlantMind-Live.")
+    doc.add_paragraph("Nothing deleted from source folders. 246+ files in PlantMind.")
 
     out = OUT / "PlantMind_Complete_Project_Blueprint.docx"
     doc.save(str(out))
@@ -522,7 +522,7 @@ def build_ppt():
         "✅ Locked: IIS formula, 5 agents, contracts, Weibull params",
         "🔲 Pending: FastAPI, LangGraph orchestrator, RAG, human approve UI",
         "Strategy: Ship v1 demo if time-critical; migrate to v2 incrementally",
-        "Workspace: PlantMind-Live (246+ files, nothing lost from merge)",
+        "Workspace: PlantMind (246+ files, nothing lost from merge)",
     ])
 
     add_content_slide(prs, "Team & Next Steps", [
@@ -537,7 +537,7 @@ def build_ppt():
     add_title_slide(prs,
         "PlantMind × Götze Engine",
         "Predict the failure. Decide the fix. Prove it.\n"
-        "Sourav Dutta · LTTS · PlantMind-Live · June 2026")
+        "Sourav Dutta · LTTS · PlantMind · June 2026")
 
     out = OUT / "PlantMind_Complete_Handover_Deck.pptx"
     prs.save(str(out))

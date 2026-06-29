@@ -1,4 +1,4 @@
-# ROADMAP - PlantMind-Live
+# ROADMAP - PlantMind
 _Last updated: 2026-06-29 · paired with context v1.0_
 
 ## Growth ledger
@@ -18,10 +18,10 @@ _Last updated: 2026-06-29 · paired with context v1.0_
 - [ ] Complete research Phases 3–6 (DATABRICKS_MAP, DATA_REALITY, ROI, ARCH_LOCK) → `docs/research/` (origin: v1.0)
 
 ## HORIZON
-- [ ] Single `make demo` or `scripts/run-demo.ps1` that launches from PlantMind-Live root regardless of v1/v2 code path (new — v1.0)
+- [ ] Single `make demo` or `scripts/run-demo.ps1` that launches from PlantMind root regardless of v1/v2 code path (new — v1.0)
 - [ ] MLflow experiment tracking under `ml/models/` with run IDs linked in audit log (new — v1.0)
 - [ ] Project-local Grok/Cursor skill at `ops/skills/plantmind-session/` wrapping start/close ritual (new — v1.0)
-- [ ] Notion + Drive sync for PlantMind-Live (migrate IDs from old PlantMind STATE.json) (new — v1.0)
+- [ ] Notion + Drive sync for PlantMind (migrate IDs from old PlantMind STATE.json) (new — v1.0)
 
 ## DONE
 - [x] Intelligent merge of PlantMind + PlantMind_hckthn into Live (246+ files) — 2026-06-29

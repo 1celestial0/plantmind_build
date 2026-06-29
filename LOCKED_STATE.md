@@ -1,11 +1,11 @@
 # LOCKED_STATE.md — PlantMind × Götze Engine
-> The canonical heartbeat of the vault. Every chat reads this first and treats it as truth. Update it only via 🔒 VAULT UPDATE blocks. Last synced: 2026-06-29 (PlantMind-Live).
+> The canonical heartbeat of the vault. Every chat reads this first and treats it as truth. Update it only via 🔒 VAULT UPDATE blocks. Last synced: 2026-06-29 (PlantMind).
 
 ---
 
 ## 0. Project identity (LOCKED)
 - **Project:** PlantMind × Götze Engine — Physics-Informed Engineering Intelligence for industrial assets.
-- **Canonical workspace:** `C:\Users\hp\Claude\Projects\PlantMind-Live`
+- **Canonical workspace:** `C:\Users\hp\Claude\Projects\PlantMind`
 - **Owner:** Sourav Dutta, Senior Data Engineer, LTTS.
 - **Event:** LTTS Global Engineering Intelligence Hackathon — 2026-07-09 (24h, OpenHack, 4 members).
 - **Strategic anchor (verified):** LTTS × Databricks Industrial AI / Engineering Intelligence partnership, announced 2026-06-11. Five joint areas: Predictive Asset Reliability, Energy & Emissions Optimization, OEE & Production Intelligence, Quality Intelligence, Sustainability Analytics.
@@ -102,6 +102,6 @@ Python 3.11 · FastAPI · Pydantic v2 · CrewAI + LangGraph · Groq Llama 3.3 70
 2026-06-28 | lane2 | Added §6a physics constants; corrected λ. | unblock Lane1 consume + Lane4 parity
 ```
 ```
-2026-06-29 | ops | PlantMind-Live canonical workspace; contracts → src/contracts/; MODEL-REGISTRY; v1 FORGE fallback note. | single living folder
+2026-06-29 | ops | PlantMind canonical workspace; contracts → src/contracts/; MODEL-REGISTRY; v1 FORGE fallback note. | single living folder
 ```
 > Append one line per change. Format: YYYY-MM-DD | lane | what changed | why.

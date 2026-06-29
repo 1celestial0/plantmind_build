@@ -2,7 +2,7 @@
 # Ultra Implementation Guide — Build, Integrate, Test
 **Version:** 1.0 | **Date:** 29 June 2026  
 **Audience:** Technical members, TL, Delivery Manager, reviewers  
-**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind-Live` (ONLY folder to work in)
+**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind` (ONLY folder to work in)
 
 ---
 
@@ -48,7 +48,7 @@ Sensors in → Health scored (Weibull) → Anomaly flagged → Götze Engine ran
 ## 1.1 Folder topology (after merge)
 
 ```
-PlantMind-Live/                          ← WORK HERE ONLY
+PlantMind/                          ← WORK HERE ONLY
 ├── LOCKED_STATE.md                      ← Locked decisions (agents, IIS, contracts)
 ├── ROADMAP.md                           ← What to do next
 ├── 00-START-HERE.md                     ← Human entry point
@@ -175,7 +175,7 @@ Without frozen contracts, Lane 1/2/3 will build incompatible modules. This is th
 ### HOW
 
 ```powershell
-cd "C:\Users\hp\Claude\Projects\PlantMind-Live"
+cd "C:\Users\hp\Claude\Projects\PlantMind"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt   # create from stack in LOCKED_STATE §5
@@ -528,7 +528,7 @@ START
 
 ```powershell
 # Session start (any AI tool)
-cd "C:\Users\hp\Claude\Projects\PlantMind-Live"
+cd "C:\Users\hp\Claude\Projects\PlantMind"
 .\scripts\start-session.ps1
 
 # v1 demo (insurance)
