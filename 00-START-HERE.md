@@ -18,8 +18,14 @@
 | **How do I end a session?** | Say **"close session"** → updates `Chat Context/`, `ROADMAP.md`, git commit |
 
 **Old folders are archives, not workspaces:**
-- `PlantMind/` — v1 code (FORGE), continuity history, completed research
-- `PlantMind_hckthn/` — vault KB source (being absorbed here)
+- `PlantMind/` — v1 source (copied into Live; do not write there)
+- `PlantMind_hckthn/` — vault source (copied into Live; do not write there)
+
+**Handover documents (CEO → engineer):**
+- `docs/CONSOLIDATED-PROJECT-BLUEPRINT.md` — master spec (single source)
+- `docs/deliverables/PlantMind_Complete_Project_Blueprint.docx` — Word handover
+- `docs/deliverables/PlantMind_Complete_Handover_Deck.pptx` — presentation
+- `docs/CONFLICT-RESOLUTION.md` — how v1/v2 conflicts were resolved
 
 See `MIGRATION-MAP.md` for the full old → new map.
 

@@ -64,7 +64,8 @@ flowchart TB
 | Phase | What | When |
 |---|---|---|
 | **0 — NOW** | Scaffold Live + operating docs | ✅ Done 2026-06-29 |
-| **1** | Copy vault KB + research into `docs/` | Next session |
+| **1** | Copy vault KB + research into `docs/` | ✅ Done 2026-06-29 |
+| **1b** | Consolidated blueprint + Word + PPT | ✅ Done 2026-06-29 |
 | **2** | Copy prompts into `ops/prompts/` | Next session |
 | **3** | Extract `FORGE/src/contracts` → `src/contracts/` | Before Lane 1 build |
 | **4** | Port `gotze_engine` → `src/agents/gotze_engine.py` (IIS refactor) | Lane 1 |
