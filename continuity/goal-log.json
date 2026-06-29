@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "project": "PlantMind",
+  "live_workspace": "C:\\Users\\hp\\Claude\\Projects\\PlantMind\\PlantMind_live",
+  "entries": [
+    {
+      "id": "G0-G6",
+      "date": "2026-06-30",
+      "title": "Phase 0 — portfolio + coach SOPs",
+      "status": "completed",
+      "why": "Establish single canonical workspace, continuity pointer, and confirmation-gate protocol before parallel lane build.",
+      "artifacts": [
+        "AI-OPERATING-SYSTEM.md | created",
+        "ops/workflows/confirmation-gate.md | created",
+        "ops/workflows/agentic-loop.md | created",
+        "continuity/STATE.json | created",
+        "src/legacy/demo-v1-metagpt/ | renamed from forge-v1"
+      ],
+      "roadmap_delta": "Phase 0 items → DONE"
+    },
+    {
+      "id": "W1-P1",
+      "date": "2026-06-30",
+      "title": "Wave 1 Phase 1 — goal-log + ops manuals",
+      "status": "completed",
+      "why": "Give team and AI coaches a shared execution log and operating manuals without relying on chat memory.",
+      "artifacts": [
+        "continuity/goal-log.json | created",
+        "ops/OPERATIONS-MANUAL.md | created",
+        "ops/TEAM-CHAT-GUIDE.md | created"
+      ],
+      "roadmap_delta": "NOW W1-P1 → DONE"
+    },
+    {
+      "id": "N1",
+      "date": "2026-06-30",
+      "title": "Split lane prompts",
+      "status": "completed",
+      "why": "Enable five parallel AI chats with one file per lane; reduce copy-paste errors.",
+      "artifacts": [
+        "ops/prompts/lanes/lane-01-backend.md | created",
+        "ops/prompts/lanes/lane-02-physics.md | created",
+        "ops/prompts/lanes/lane-03-dashboard.md | created",
+        "ops/prompts/lanes/lane-04-databricks.md | created",
+        "ops/prompts/lanes/lane-05-demo.md | created"
+      ],
+      "roadmap_delta": "NEXT N1 → DONE"
+    },
+    {
+      "id": "N2",
+      "date": "2026-06-30",
+      "title": "src/contracts Pydantic models",
+      "status": "completed",
+      "why": "Lock Layer-0 JSON shapes from LOCKED_STATE §4 so lanes communicate without reaching into internals.",
+      "artifacts": [
+        "src/contracts/__init__.py | created",
+        "src/contracts/physics.py | created",
+        "src/contracts/ui.py | created",
+        "src/contracts/audit.py | created"
+      ],
+      "roadmap_delta": "NEXT N2 → DONE"
+    },
+    {
+      "id": "N3",
+      "date": "2026-06-30",
+      "title": "Research Phases 3–6",
+      "status": "completed",
+      "why": "Close judge-narrative gaps: Databricks mapping, data landscape, ROI defensibility, architecture lock.",
+      "artifacts": [
+        "docs/research/DATABRICKS_MAP_2026_30th_June.md | created",
+        "docs/research/DATA_REALITY_2026_30th_June.md | created",
+        "docs/research/ROI_BENCHMARKS_2026_30th_June.md | created",
+        "docs/research/ARCHITECTURE_LOCK_2026_30th_June.md | created"
+      ],
+      "roadmap_delta": "NEXT N3 → DONE"
+    },
+    {
+      "id": "H1-H4",
+      "date": "2026-06-30",
+      "title": "Horizon automation scaffolds",
+      "status": "completed",
+      "why": "Prepare Drive export, MLflow tracking, session skill, and Notion/Drive sync stubs for later waves.",
+      "artifacts": [
+        "scripts/export-to-drive.ps1 | created",
+        "ml/models/README.md | created",
+        "ml/tracking/mlflow_config.py | created",
+        "ops/skills/plantmind-session/SKILL.md | created",
+        "scripts/sync-notion-drive.ps1 | created"
+      ],
+      "roadmap_delta": "HORIZON H1–H4 → DONE (scaffold)"
+    },
+    {
+      "id": "DEMO-SKIP",
+      "date": "2026-06-30",
+      "title": "v1 demo polish — deferred",
+      "status": "deferred",
+      "why": "User confirmed v1 code is not production-ready; focus on spine (ops, contracts, research, lanes) first.",
+      "artifacts": [],
+      "roadmap_delta": "NOW demo smoke + NEXT dashboard port → DEFERRED",
+      "notes": "Known issues: FORGE imports, RUL snapshot at end-of-life, run_demo.py kwargs. Revisit before hackathon freeze."
+    }
+  ]
+}

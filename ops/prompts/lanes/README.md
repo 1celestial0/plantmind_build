@@ -10,4 +10,4 @@ Open **one lane per chat**. Paste the matching prompt as the first message.
 | `lane-04-databricks.md` | 4 | DLT, Feature Store, Unity Catalog |
 | `lane-05-demo.md` | 5 | demo script, pitch, ROI, Q&A |
 
-**Source:** split from `../../PlantMind_hckthn/PLANTMIND_5_CHAT_PROMPTS.md` (ROADMAP NEXT item).
+**Source:** split from `../PLANTMIND_5_CHAT_PROMPTS.md` (completed 2026-06-30).
