@@ -21,7 +21,7 @@
 ```
 1. cd C:\Users\hp\Claude\Projects\{ProjectName}
 2. .\scripts\start-session.ps1
-3. AI reads: AI-OPERATING-SYSTEM.md → LOCKED_STATE.md → ROADMAP NOW
+3. AI reads: AI-OPERATING-SYSTEM.md → TEAM-OPERATIONS-PLAYBOOK.md → LOCKED_STATE → Chat Context → ROADMAP NOW
 4. AI declares lane (if building)
 5. Work in routed folder (ops/ROUTING.md)
 6. git commit per phase gate

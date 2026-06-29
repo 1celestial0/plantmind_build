@@ -2,7 +2,8 @@
 
 _Last updated: 2026-06-30 · Wave 1 Phase 1_
 
-Single reference for how the team and AI tools run this project day to day.
+> **Canonical team reference:** `ops/TEAM-OPERATIONS-PLAYBOOK.md` (start/close/status/testing/CLI parity).  
+> This file is the structural supplement; share the **Playbook** with teammates first.
 
 ---
 

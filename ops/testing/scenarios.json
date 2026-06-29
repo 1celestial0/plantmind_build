@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "project": "PlantMind",
+  "source": "docs/architecture/08_DEMO_SCENARIOS.md",
+  "scenarios": [
+    {
+      "id": "A",
+      "slug": "gradual_pump_wear",
+      "name": "Gradual pump wear (hero demo)",
+      "asset_id": "pump_07",
+      "mode": "gradual_wear",
+      "priority": "hero",
+      "expected_triggers": { "health_lt": 40, "rul_days_lt": 14 },
+      "expected_agents": ["DataSentinel", "AssetHealthOracle", "GotzeEngine", "RootCauseAnalyst", "ExecutiveSummarizer"],
+      "expected_outcome": "reduce_load_or_seal_swap",
+      "human_approval_required": true
+    },
+    {
+      "id": "B",
+      "slug": "sudden_bearing_impact",
+      "name": "Sudden bearing impact",
+      "asset_id": "bearing_3",
+      "mode": "sudden_impact",
+      "priority": "core",
+      "expected_triggers": { "datasentinel_severity": "critical" },
+      "expected_outcome": "emergency_stop",
+      "human_approval_required": true
+    },
+    {
+      "id": "C",
+      "slug": "intermittent_valve",
+      "name": "Intermittent valve fault",
+      "asset_id": "valve_11",
+      "mode": "intermittent_fault",
+      "priority": "core",
+      "expected_detection": "mahalanobis_pattern",
+      "human_approval_required": true
+    },
+    {
+      "id": "D",
+      "slug": "sensor_dropout",
+      "name": "Sensor dropout (edge)",
+      "asset_id": "motor_2",
+      "mode": "data_quality",
+      "priority": "edge",
+      "expected_outcome": "flag_bad_data_not_bad_machine",
+      "human_approval_required": false
+    },
+    {
+      "id": "E",
+      "slug": "conflicting_signals",
+      "name": "Conflicting signals (edge)",
+      "asset_id": "comp_4",
+      "mode": "multivariate",
+      "priority": "edge",
+      "expected_outcome": "data_quality_review",
+      "human_approval_required": false
+    }
+  ]
+}

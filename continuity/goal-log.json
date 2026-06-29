@@ -98,6 +98,27 @@
       "artifacts": [],
       "roadmap_delta": "NOW demo smoke + NEXT dashboard port → DEFERRED",
       "notes": "Known issues: FORGE imports, RUL snapshot at end-of-life, run_demo.py kwargs. Revisit before hackathon freeze."
+    },
+    {
+      "id": "SESSION-CLOSE",
+      "date": "2026-06-30",
+      "title": "Session close — playbook, testing, parallel docs, CLI parity",
+      "status": "completed",
+      "why": "User wrapping day; needs repeatable start/close, test logs, same behavior in any CLI tomorrow.",
+      "artifacts": [
+        "ops/TEAM-OPERATIONS-PLAYBOOK.md | created",
+        "ops/CLI-PARITY.md | created",
+        "ops/testing/scenarios.json | created",
+        "tests/test_contracts.py | created",
+        "tests/test_scenarios.py | created",
+        "continuity/test-log.json | created",
+        "scripts/run-tests.ps1 | created",
+        "scripts/check-status.ps1 | created",
+        "docs/parallel/ | created",
+        "Chat Context/2026-06-30_v1.4_project-context.md | created"
+      ],
+      "roadmap_delta": "Testing scaffold → DONE; NOW unchanged (Lane 1+2)",
+      "notes": "14 pytest passed at close"
     }
   ]
 }

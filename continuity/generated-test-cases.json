@@ -1,0 +1,79 @@
+[
+  {
+    "test_id": "SCENARIO-A",
+    "slug": "gradual_pump_wear",
+    "name": "Gradual pump wear (hero demo)",
+    "asset_id": "pump_07",
+    "mode": "gradual_wear",
+    "priority": "hero",
+    "status": "pending_implementation",
+    "automated": true,
+    "assertions": [
+      "asset_id=pump_07",
+      "mode=gradual_wear",
+      "requires_human_approval=true",
+      "outcome=reduce_load_or_seal_swap"
+    ]
+  },
+  {
+    "test_id": "SCENARIO-B",
+    "slug": "sudden_bearing_impact",
+    "name": "Sudden bearing impact",
+    "asset_id": "bearing_3",
+    "mode": "sudden_impact",
+    "priority": "core",
+    "status": "pending_implementation",
+    "automated": true,
+    "assertions": [
+      "asset_id=bearing_3",
+      "mode=sudden_impact",
+      "requires_human_approval=true",
+      "outcome=emergency_stop"
+    ]
+  },
+  {
+    "test_id": "SCENARIO-C",
+    "slug": "intermittent_valve",
+    "name": "Intermittent valve fault",
+    "asset_id": "valve_11",
+    "mode": "intermittent_fault",
+    "priority": "core",
+    "status": "pending_implementation",
+    "automated": true,
+    "assertions": [
+      "asset_id=valve_11",
+      "mode=intermittent_fault",
+      "requires_human_approval=true"
+    ]
+  },
+  {
+    "test_id": "SCENARIO-D",
+    "slug": "sensor_dropout",
+    "name": "Sensor dropout (edge)",
+    "asset_id": "motor_2",
+    "mode": "data_quality",
+    "priority": "edge",
+    "status": "pending_implementation",
+    "automated": true,
+    "assertions": [
+      "asset_id=motor_2",
+      "mode=data_quality",
+      "outcome=flag_bad_data_not_bad_machine"
+    ]
+  },
+  {
+    "test_id": "SCENARIO-E",
+    "slug": "conflicting_signals",
+    "name": "Conflicting signals (edge)",
+    "asset_id": "comp_4",
+    "mode": "multivariate",
+    "priority": "edge",
+    "status": "pending_implementation",
+    "automated": true,
+    "assertions": [
+      "asset_id=comp_4",
+      "mode=multivariate",
+      "outcome=data_quality_review"
+    ]
+  }
+]

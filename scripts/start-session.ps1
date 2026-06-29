@@ -1,4 +1,4 @@
-# PlantMind — Session Start Script
+# PlantMind - Session Start Script
 # Run at the beginning of every work session (any AI tool)
 
 $Root = "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"
@@ -6,7 +6,7 @@ Set-Location $Root
 
 Write-Host ""
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "  PlantMind — Session Start" -ForegroundColor Cyan
+Write-Host "  PlantMind - Session Start" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "Workspace: $Root" -ForegroundColor Green
 Write-Host ""
@@ -40,11 +40,13 @@ git -C $Root status --short 2>$null | Select-Object -First 8
 
 Write-Host ""
 Write-Host "Read order for AI:" -ForegroundColor Cyan
-Write-Host "  1. 00-START-HERE.md"
+Write-Host "  1. AI-OPERATING-SYSTEM.md + ops/TEAM-OPERATIONS-PLAYBOOK.md"
 Write-Host "  2. LOCKED_STATE.md"
-Write-Host "  3. ROADMAP.md"
-Write-Host "  4. docs/IMPLEMENTATION-GUIDE-ULTRA.md (if building)"
+Write-Host "  3. Latest Chat Context/"
+Write-Host "  4. ROADMAP.md NOW"
 Write-Host ""
-Write-Host "v1 demo: streamlit run src\legacy\demo-v1-metagpt\app.py" -ForegroundColor Green
-Write-Host "Close: tell AI 'close session'" -ForegroundColor Green
+Write-Host "Status : scripts\check-status.ps1" -ForegroundColor Green
+Write-Host "Tests  : scripts\run-tests.ps1" -ForegroundColor Green
+Write-Host "Close  : tell AI 'close session'" -ForegroundColor Green
+Write-Host "Playbook: ops\TEAM-OPERATIONS-PLAYBOOK.md" -ForegroundColor Green
 Write-Host ""

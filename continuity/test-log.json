@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "project": "PlantMind",
+  "runs": [
+    {
+      "run_id": "3cd7bf00-112c-41cf-a75d-7143833a784d",
+      "timestamp": "2026-06-29T22:51:44.807641+00:00",
+      "trigger": "session-close",
+      "passed": 14,
+      "failed": 0,
+      "total": 14,
+      "cases": [
+        {
+          "test_id": "test_physics_model_output_roundtrip",
+          "class": "tests.test_contracts",
+          "status": "pass",
+          "duration_ms": 2,
+          "message": null
+        },
+        {
+          "test_id": "test_gotze_decision_requires_approval",
+          "class": "tests.test_contracts",
+          "status": "pass",
+          "duration_ms": 0,
+          "message": null
+        },
+        {
+          "test_id": "test_asset_health_report",
+          "class": "tests.test_contracts",
+          "status": "pass",
+          "duration_ms": 0,
+          "message": null
+        },
+        {
+          "test_id": "test_executive_brief",
+          "class": "tests.test_contracts",
+          "status": "pass",
+          "duration_ms": 1,
+          "message": null
+        },
+        {
+          "test_id": "test_audit_record_with_lineage",
+          "class": "tests.test_contracts",
+          "status": "pass",
+          "duration_ms": 1,
+          "message": null
+        },
+        {
+          "test_id": "test_scenarios_json_valid",
+          "class": "tests.test_scenarios",
+          "status": "pass",
+          "duration_ms": 0,
+          "message": null
+        },
+        {
+          "test_id": "test_each_scenario_has_required_fields[A]",
+          "class": "tests.test_scenarios",
+          "status": "pass",
+          "duration_ms": 0,
+          "message": null
+        },
+        {
+          "test_id": "test_each_scenario_has_required_fields[B]",
+          "class": "tests.test_scenarios",
+          "status": "pass",
+          "duration_ms": 0,
+          "message": null
+        },
+        {
+          "test_id": "test_each_scenario_has_required_fields[C]",
+          "class": "tests.test_scenarios",
+          "status": "pass",
+          "duration_ms": 0,
+          "message": null
+        },
+        {
+          "test_id": "test_each_scenario_has_required_fields[D]",
+          "class": "tests.test_scenarios",
+          "status": "pass",
+          "duration_ms": 1,
+          "message": null
+        },
+        {
+          "test_id": "test_each_scenario_has_required_fields[E]",
+          "class": "tests.test_scenarios",
+          "status": "pass",
+          "duration_ms": 0,
+          "message": null
+        },
+        {
+          "test_id": "test_generate_test_cases_count",
+          "class": "tests.test_scenarios",
+          "status": "pass",
+          "duration_ms": 1,
+          "message": null
+        },
+        {
+          "test_id": "test_hero_scenario_pump_07",
+          "class": "tests.test_scenarios",
+          "status": "pass",
+          "duration_ms": 0,
+          "message": null
+        },
+        {
+          "test_id": "test_scenarios_file_matches_generator",
+          "class": "tests.test_scenarios",
+          "status": "pass",
+          "duration_ms": 2,
+          "message": null
+        }
+      ]
+    }
+  ]
+}

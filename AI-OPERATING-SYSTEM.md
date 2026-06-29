@@ -1,6 +1,6 @@
 # PlantMind — Multi-CLI Operating System
 
-**Work here only:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live\PlantMind_live`  
+**Work here only:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`
 **Portfolio:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live\` (live · OS · Archive · GitHub)
 
 ---
@@ -34,9 +34,13 @@
 ## Session protocol
 
 ```powershell
-cd "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live\PlantMind_live"
-.\scripts\start-session.ps1
+cd "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"
+powershell -ExecutionPolicy Bypass -File .\scripts\start-session.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\check-status.ps1
 ```
+
+**Team playbook (human + AI):** `ops/TEAM-OPERATIONS-PLAYBOOK.md`  
+**CLI parity:** `ops/CLI-PARITY.md` — identical behavior in every tool
 
 **Read order:** `00-START-HERE` → `LOCKED_STATE` → Chat Context (latest `vX.Y`) → `ROADMAP` NOW  
 **Building:** `docs/00-MASTER-SPEC.md` + phase guide · declare lane · `ops/ROUTING.md`

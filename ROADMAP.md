@@ -1,5 +1,5 @@
 # ROADMAP - PlantMind
-_Last updated: 2026-06-30 · paired with context v1.3_
+_Last updated: 2026-06-30 · paired with context v1.4 · session closed_
 
 ## Growth ledger
 | Date | Context version | Items added | Items completed | Net delta | Open items total |
@@ -8,6 +8,7 @@ _Last updated: 2026-06-30 · paired with context v1.3_
 | 2026-06-29 | v1.0 | 2 | 6 | -4 | 10 |
 | 2026-06-30 | v1.2 | 1 | 0 | +1 | 11 |
 | 2026-06-30 | v1.3 | 1 | 10 | -9 | 2 |
+| 2026-06-30 | v1.4 | 2 | 1 | +1 | 3 |
 
 ## NOW
 - [ ] Lane 2 build: `src/physics/` Weibull + `ml/synthesis/` data generator (origin: ARCHITECTURE_LOCK P1)
@@ -24,6 +25,7 @@ _Last updated: 2026-06-30 · paired with context v1.3_
 - [ ] `scripts/run-demo.ps1` unified runner
 
 ## HORIZON
+- [ ] Wire scenario injectors A–E to `ml/synthesis/` + integration pytest (catalog exists)
 - [ ] GitHub remote + publish script (`PlantMind_GitHub/`)
 - [ ] Full 20-row × 10 dataset samples in `ml/synthesis/` (DATA_REALITY completion)
 - [ ] PINN stretch (freeze by Hour 14 if not validating)
@@ -47,3 +49,5 @@ _Last updated: 2026-06-30 · paired with context v1.3_
 - [x] MLflow scaffold `ml/tracking/` + `ml/models/` — 2026-06-30
 - [x] `ops/skills/plantmind-session/` session skill — 2026-06-30
 - [x] `scripts/sync-notion-drive.ps1` stub + STATE.json IDs — 2026-06-30
+- [x] TEAM-OPERATIONS-PLAYBOOK + CLI-PARITY + testing framework (14 pytest) — 2026-06-30
+- [x] `docs/parallel/` lane living docs + `scripts/check-status.ps1` — 2026-06-30

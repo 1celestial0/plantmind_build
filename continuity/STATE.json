@@ -1,8 +1,8 @@
 {
   "project_name": "PlantMind",
   "skill_version": "1.0.0",
-  "latest_context_version": "v1.3",
-  "latest_context_file": "Chat Context/2026-06-30_v1.3_project-context.md",
+  "latest_context_version": "v1.4",
+  "latest_context_file": "Chat Context/2026-06-30_v1.4_project-context.md",
   "notion_database_id": "7f145981-b09c-48fa-8e32-5f2e818e657a",
   "notion_page_id": null,
   "last_synced_to_notion": null,
@@ -11,6 +11,10 @@
   "git_remote": null,
   "roadmap_open_items_last_close": 2,
   "wave_1_phase_1_completed": "2026-06-30",
+  "session_closed": "2026-06-30",
+  "last_test_run": "2026-06-30",
+  "last_test_passed": 14,
+  "last_test_failed": 0,
   "portfolio_root": "C:\\Users\\hp\\Claude\\Projects\\PlantMind",
   "live_workspace": "C:\\Users\\hp\\Claude\\Projects\\PlantMind\\PlantMind_live",
   "phase_0_completed": "2026-06-30"
