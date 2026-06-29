@@ -1,0 +1,28 @@
+# plant_config.yaml — tunable thresholds (LOCKED_STATE §3)
+# Change values here without code edits. Do NOT change keys without VAULT UPDATE.
+
+triggers:
+  health_threshold: 40       # invoke GötzeEngine if health < this
+  rul_days_threshold: 14     # invoke GötzeEngine if rul_days < this
+  critical_severity: true    # invoke if DataSentinel severity == critical
+
+physics:
+  cycles_per_day: 6.0        # ESTIMATE — update when plant schedule confirmed
+  h_failure_threshold: 20.0  # health at which RUL = 0
+
+iis_weights:
+  delta_p_failure: 0.35
+  delta_downtime_cost: 0.25
+  feasibility: 0.20
+  historical_success: 0.15
+  safety_risk_delta: -0.05   # subtracted
+
+anomaly_detection:
+  z_score_threshold: 3.0
+  mahalanobis_threshold: 5.0
+
+synthesis:
+  n_assets_per_type: 6       # 6 × 5 types = 30 total
+  n_cycles: 500
+  n_signals: 20
+  random_seed: 42

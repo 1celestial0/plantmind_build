@@ -1,5 +1,5 @@
 # ROADMAP - PlantMind
-_Last updated: 2026-06-30 · paired with context v1.4 · session closed_
+_Last updated: 2026-06-30 · paired with context v1.6 · session in progress_
 
 ## Growth ledger
 | Date | Context version | Items added | Items completed | Net delta | Open items total |
@@ -9,10 +9,11 @@ _Last updated: 2026-06-30 · paired with context v1.4 · session closed_
 | 2026-06-30 | v1.2 | 1 | 0 | +1 | 11 |
 | 2026-06-30 | v1.3 | 1 | 10 | -9 | 2 |
 | 2026-06-30 | v1.4 | 2 | 1 | +1 | 3 |
+| 2026-06-30 | v1.5 | 0 | 2 | -2 | 1 |
+| 2026-06-30 | v1.6 | 0 | 1 | -1 | 0 |
 
 ## NOW
-- [ ] Lane 2 build: `src/physics/` Weibull + `ml/synthesis/` data generator (origin: ARCHITECTURE_LOCK P1)
-- [ ] Lane 1 build: agent stubs + orchestrator + FastAPI skeleton (origin: ARCHITECTURE_LOCK P2)
+- [x] Lane 3: `src/dashboard/` Streamlit — Plant Overview + GötzeDecision + Audit Log (all pages verified in browser) — 2026-06-30
 
 ## NEXT
 - [ ] Lane 3: `src/dashboard/` mockups → Streamlit shell (read-only contracts)
@@ -51,3 +52,6 @@ _Last updated: 2026-06-30 · paired with context v1.4 · session closed_
 - [x] `scripts/sync-notion-drive.ps1` stub + STATE.json IDs — 2026-06-30
 - [x] TEAM-OPERATIONS-PLAYBOOK + CLI-PARITY + testing framework (14 pytest) — 2026-06-30
 - [x] `docs/parallel/` lane living docs + `scripts/check-status.ps1` — 2026-06-30
+- [x] Lane 2: `src/physics/` Weibull engine + `ml/synthesis/` generator (15k rows, 32 tests) — 2026-06-30
+- [x] Lane 1: 5 agents + orchestrator + FastAPI + governance + RAG stub (78 tests, 6.5ms/call) — 2026-06-30
+- [x] Lane 3: Streamlit dashboard — Plant Overview (gauge + RUL bar + anomaly badges), GötzeDecision (IIS chart + approval gate), Audit Log (lineage table) — 2026-06-30
