@@ -1,6 +1,7 @@
 # Migration Map — archives → PlantMind (active)
 
-> **Completed 2026-06-29.** Archives at `_archive/PlantMind/`.
+> **Completed 2026-06-29.** Archives at `../PlantMind_Archive/` (sibling of live).
+> **Phase 0 (2026-06-30):** Portfolio `Projects/PlantMind/` → `PlantMind_live` + `PlantMind_OS` + `PlantMind_Archive` + `PlantMind_GitHub`.
 
 > Absorb, don't duplicate. Old folders become **read-only archives** once content is migrated.
 

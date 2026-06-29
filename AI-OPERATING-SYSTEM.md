@@ -1,76 +1,97 @@
 # PlantMind — Multi-CLI Operating System
 
-**One active folder:** `C:\Users\hp\Claude\Projects\PlantMind`  
-**Template for new projects:** `C:\Users\hp\Claude\Projects\_ProjectOS`  
-**Archives:** `C:\Users\hp\Claude\Projects\_archive\PlantMind\`
+**Work here only:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live\PlantMind_live`  
+**Portfolio:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live\` (live · OS · Archive · GitHub)
 
 ---
 
-## Registered CLIs (extensible)
+## Coach behavior (all CLIs)
 
-| CLI | Entry file | Add new tools in `ops/CLI-REGISTRY.md` |
+1. **ORIENT** — read truth files; summarize in ≤5 sentences; never write until confirmed.
+2. **PROPOSE** — sequential goals table (max 3–5) before any action. See `ops/workflows/confirmation-gate.md`.
+3. **OPERATE** — only after user says **"Proceed with Goals"** (optional: `G1 only`).
+4. **LOG** — goal completion log after each goal (why, artifacts, impacts, recommendations).
+5. **PROMPT** — after work: manual steps + suggested next goals (do not auto-run).
+
+**Agentic loop:** `ops/workflows/agentic-loop.md`
+
+---
+
+## Registered CLIs
+
+| CLI | Entry file | Registry |
 |---|---|---|
-| Claude Code | `CLAUDE.md` | |
+| Claude Code | `CLAUDE.md` | `ops/CLI-REGISTRY.md` |
 | Grok CLI | `AGENTS.md` | |
 | Gemini CLI | `GEMINI.md` | |
 | Codex CLI | `CODEX.md` | |
-| *Future* | `{TOOL}.md` | Copy CODEX.md pattern |
+| *Future* | `{TOOL}.md` | Copy `CODEX.md` pattern |
 
-**Rule:** New CLI = one row in registry + one pointer file. **Never** duplicate LOCKED_STATE or specs.
+**Rule:** Entry files point here — never duplicate LOCKED_STATE or specs.
 
 ---
 
-## Session protocol (every CLI, every session)
+## Session protocol
 
 ```powershell
-cd "C:\Users\hp\Claude\Projects\PlantMind"
+cd "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live\PlantMind_live"
 .\scripts\start-session.ps1
 ```
 
-```
-Read: 00-START-HERE → LOCKED_STATE → Chat Context (latest) → ROADMAP NOW
-If building: docs/00-MASTER-SPEC.md + docs/IMPLEMENTATION-GUIDE-ULTRA.md (phase)
-Declare lane. Write only in routed folders (ops/ROUTING.md).
-```
+**Read order:** `00-START-HERE` → `LOCKED_STATE` → Chat Context (latest `vX.Y`) → `ROADMAP` NOW  
+**Building:** `docs/00-MASTER-SPEC.md` + phase guide · declare lane · `ops/ROUTING.md`
 
-**Close:** `close session` → ROADMAP + new Chat Context + `git commit`
+**Close:** say **"close session"** → propose close goals → on confirm: ROADMAP + new Chat Context + `git commit`
 
 ---
 
-## Conflict prevention (multi-CLI)
+## Portfolio layout
+
+```
+PlantMind/
+├── PlantMind_live/      ← daily workspace (git)
+├── PlantMind_OS/        ← template + templates/
+├── PlantMind_Archive/   ← read-only snapshots
+└── PlantMind_GitHub/    ← public publish target
+```
+
+---
+
+## Continuity (tool-agnostic)
+
+| File | Role |
+|---|---|
+| `Chat Context/` | Append-only session history |
+| `ROADMAP.md` | Backlog only (NOW / NEXT / HORIZON) |
+| `LOCKED_STATE.md` | Frozen decisions (VAULT UPDATE) |
+| `continuity/STATE.json` | Machine pointer + sync metadata |
+
+Templates for new projects: `../PlantMind_OS/templates/`
+
+---
+
+## Conflict prevention
 
 | Rule | Why |
 |---|---|
 | git commit before switching CLI | See who changed what |
-| One lane per chat | No two tools editing same module |
-| Contracts → vault update | LOCKED_STATE + `src/contracts/` together |
-| Next steps → ROADMAP only | Not in tool-specific memory |
-| Canonical spec → `docs/00-MASTER-SPEC.md` | Merged doc wins over duplicates |
-
----
-
-## Portfolio layout (all projects)
-
-```
-C:\Users\hp\Claude\Projects\
-├── _ProjectOS\           ← copy to start new project
-├── _archive\
-│   └── {Project}\
-│       └── YYYYMMDD_snapshot-{label}\
-└── {Project}\            ← ONE active folder (PlantMind)
-```
+| One lane per chat | `ops/ROUTING.md` |
+| Contracts ↔ vault together | LOCKED_STATE + `src/contracts/` |
+| Next steps → ROADMAP only | Not in Chat Context |
+| Goals before writes | `confirmation-gate.md` |
 
 ---
 
 ## Naming & inventory
 
-- New artifacts: `ops/NAMING-CONVENTIONS.md`
-- File lineage: `docs/CODEBASE-INVENTORY.md`
-- Doc registry: `docs/INDEX.md`
+- `ops/NAMING-CONVENTIONS.md`
+- `docs/CODEBASE-INVENTORY.md`
+- `docs/INDEX.md`
 
 ---
 
 ## Never write to
 
-- `_archive/` (read-only)
-- Old paths: `PlantMind`, `PlantMind_hckthn` (retired)
+- `../PlantMind_Archive/` (read-only)
+- `../PlantMind_GitHub/` (publish script only)
+- `../PlantMind_OS/` (template — copy out, don't edit in place for product work)

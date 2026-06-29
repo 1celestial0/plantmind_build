@@ -8,7 +8,7 @@ This document records how conflicts between `PlantMind/` (v1 FORGE) and `PlantMi
 ## Resolution principles
 
 1. **v2 vault (LOCKED_STATE) wins** for product architecture, agents, IIS, contracts, and governance.
-2. **v1 FORGE wins** for what is already built and runnable (preserved at `src/legacy/forge-v1/`).
+2. **v1 FORGE wins** for what is already built and runnable (preserved at `src/legacy/demo-v1-metagpt/`).
 3. **Research artifacts** from both streams are kept; pain register uses Layer 0 interface names (aligned with v2).
 4. **Dual-path hackathon strategy** is explicit: demo can ship from v1 while v2 migrates into `src/`.
 
@@ -21,7 +21,7 @@ This document records how conflicts between `PlantMind/` (v1 FORGE) and `PlantMi
 | C1 | Organizing model | 5 Layers (Data→Features→RUL→Decision→Proof) | 5 Agents (Sentinel→Oracle→Götze→RCA→Summarizer) | **Both valid views.** Layers = data pipeline. Agents = runtime orchestration. Map Layer 1-3 → Agents 1-2; Layer 4 → Agent 3; Layer 5 → Agents 4-5 + governance. |
 | C2 | Scoring formula | G-score: 0.40·ΔHealth + 0.25·cost + 0.20·time + 0.15·Safety | IIS: 0.35·ΔP + 0.25·ΔCost + 0.20·Feasibility + 0.15·History − 0.05·Safety | **IIS is canonical** for product/IP. G-score retained as v1 implementation alias. Migration maps ΔHealth→ΔP_failure, NormCost→ΔDowntimeCost, NormTime→Feasibility proxy. |
 | C3 | Health / RUL model | RandomForest on C-MAPSS cycles; RED if RUL<30 cycles | Weibull H(t); RUL in days; trigger health<40 or rul_days<14 | **Weibull analytical is canonical** for multi-asset plant. RF-CMAPSS is **v1 demo path** for turbofan proof. PINN = optional stretch only. |
-| C4 | Orchestration | MetaGPT PipelineOrchestrator + 3 roles | CrewAI + LangGraph 5-agent sequence | **LangGraph 5-agent sequence is canonical.** MetaGPT = v1 structural POC preserved in forge-v1. |
+| C4 | Orchestration | MetaGPT PipelineOrchestrator + 3 roles | CrewAI + LangGraph 5-agent sequence | **LangGraph 5-agent sequence is canonical.** MetaGPT = v1 structural POC preserved in demo-v1-metagpt. |
 | C5 | LLM in decision | Blueprint: LLM root cause; FORGE: zero LLM | Groq narrative only; IIS math deterministic | **Deterministic scoring + LLM narrative only** (v2 rule). v1's no-LLM path acceptable for demo fallback. |
 | C6 | Human approval | Not implemented | Required before action logged | **Required** — v2 governance; gap in v1 noted as P0 for v2 dashboard. |
 | C7 | Proof mechanism | RED→GREEN counterfactual chart (built) | IIS ranking + audit + approve | **Combined proof story:** counterfactual chart (visual) + immutable audit + human approve (governance). Both ship in full vision. |
@@ -41,7 +41,7 @@ This document records how conflicts between `PlantMind/` (v1 FORGE) and `PlantMi
 | Source | Live destination | Status |
 |---|---|---|
 | PlantMind_hckthn (14 files) | docs/architecture, docs/dna, ops/prompts | ✅ Copied |
-| PlantMind/FORGE | src/legacy/forge-v1 | ✅ Copied |
+| PlantMind/FORGE | src/legacy/demo-v1-metagpt | ✅ Copied |
 | PlantMind/PlantMind_Research | docs/research | ✅ Copied |
 | PlantMind v1 blueprints | docs/legacy/v1-blueprint | ✅ Copied |
 | PlantMind/LEARNING, RESEARCH | docs/learning, docs/research-sources | ✅ Copied |

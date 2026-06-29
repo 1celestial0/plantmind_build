@@ -1,6 +1,6 @@
 # PlantMind × Götze Engine — Master Specification
 **Version:** 2.0 Merged | **Date:** 2026-06-29  
-**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind`  
+**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`  
 **Replaces:** CONSOLIDATED-PROJECT-BLUEPRINT, IMPLEMENTATION-GUIDE-ULTRA (as primary), WIN-STRATEGY (as primary)
 
 > Single document for CEO → engineer. Conflicts resolved per `CONFLICT-RESOLUTION.md` — **better option wins**.
@@ -24,7 +24,7 @@
 
 # §2 Two implementations, one product
 
-| | v1 `src/legacy/forge-v1/` | v2 `src/` |
+| | v1 `src/legacy/demo-v1-metagpt/` | v2 `src/` |
 |---|---|---|
 | Status | ✅ Runnable | 🔲 Build P0–P6 |
 | Model | 5-layer MetaGPT | 5-agent LangGraph |
@@ -97,7 +97,7 @@ Dashboard reads JSON only — never imports physics internals.
 # §8 Demo
 
 **Hero:** Scenario A — pump degrades → IIS winner → approve → audit  
-**v1 run:** `streamlit run src\legacy\forge-v1\app.py`  
+**v1 run:** `streamlit run src\legacy\demo-v1-metagpt\app.py`  
 **5-min script:** `docs/architecture/08_DEMO_SCENARIOS.md`
 
 ---
@@ -144,7 +144,7 @@ Migration map: `docs/CODEBASE-INVENTORY.md` §3
 
 No 200% guarantee. Composite ~7.8/10 today; ~8.5/10 with polished v1 demo.
 
-**Max win path:** Demo forge-v1 · Pitch v2 vision · Rehearse 10× · Backup video by July 8
+**Max win path:** Demo demo-v1-metagpt · Pitch v2 vision · Rehearse 10× · Backup video by July 8
 
 Full analysis: `docs/WIN-STRATEGY-ASSESSMENT.md` (audit copy)
 
@@ -154,7 +154,7 @@ Full analysis: `docs/WIN-STRATEGY-ASSESSMENT.md` (audit copy)
 
 ```
 Projects/
-├── _ProjectOS/     template
+├── PlantMind_OS/     template
 ├── _archive/       frozen snapshots
 └── PlantMind/      ACTIVE (this project)
 ```

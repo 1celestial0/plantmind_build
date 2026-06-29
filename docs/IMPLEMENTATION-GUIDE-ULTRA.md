@@ -2,7 +2,7 @@
 # Ultra Implementation Guide — Build, Integrate, Test
 **Version:** 1.0 | **Date:** 29 June 2026  
 **Audience:** Technical members, TL, Delivery Manager, reviewers  
-**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind` (ONLY folder to work in)
+**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live` (ONLY folder to work in)
 
 ---
 
@@ -30,7 +30,7 @@ Sensors in → Health scored (Weibull) → Anomaly flagged → Götze Engine ran
 
 ## Two implementations — one product
 
-| | **v1 Reference** (`src/legacy/forge-v1/`) | **v2 Target** (`src/` — build here) |
+| | **v1 Reference** (`src/legacy/demo-v1-metagpt/`) | **v2 Target** (`src/` — build here) |
 |---|---|---|
 | **Status** | ✅ Built, runnable | 🔲 Scaffolded |
 | **Architecture** | 5-layer MetaGPT pipeline | 5-agent LangGraph sequence |
@@ -63,7 +63,7 @@ PlantMind/                          ← WORK HERE ONLY
 │   ├── governance/                      ← Audit log, hash chain (BUILD)
 │   ├── rag/                             ← ChromaDB retrieval (BUILD)
 │   ├── dashboard/                       ← Streamlit v2 (BUILD)
-│   └── legacy/forge-v1/                 ← v1 COMPLETE — do not delete
+│   └── legacy/demo-v1-metagpt/                 ← v1 COMPLETE — do not delete
 │       ├── app.py                       ← Streamlit demo
 │       ├── src/pipeline.py              ← MetaGPT orchestrator
 │       ├── src/gotze_engine.py          ← G-score engine
@@ -136,13 +136,13 @@ synthetic CSV / Kaggle seed
 
 | v1 module | v2 destination | Migration action |
 |---|---|---|
-| `forge-v1/src/ingestion.py` | `ml/data/` + `src/physics/` | Extract C-MAPSS loader; add synthetic generator |
-| `forge-v1/src/features.py` | `src/physics/features.py` | Port rolling window; add physics features |
-| `forge-v1/src/model.py` | `ml/training/` (fallback) | Keep RF as C-MAPSS path only |
-| `forge-v1/src/gotze_engine.py` | `src/agents/gotze_engine.py` | **Rewrite** G-score → IIS |
-| `forge-v1/src/pipeline.py` | `src/pipeline/orchestrator.py` | **Rewrite** MetaGPT → LangGraph |
-| `forge-v1/app.py` | `src/dashboard/app.py` | Reskin; add approve + IIS panel |
-| `forge-v1/src/messages.py` | `src/contracts/messages.py` | Extend to v2 contract shapes |
+| `demo-v1-metagpt/src/ingestion.py` | `ml/data/` + `src/physics/` | Extract C-MAPSS loader; add synthetic generator |
+| `demo-v1-metagpt/src/features.py` | `src/physics/features.py` | Port rolling window; add physics features |
+| `demo-v1-metagpt/src/model.py` | `ml/training/` (fallback) | Keep RF as C-MAPSS path only |
+| `demo-v1-metagpt/src/gotze_engine.py` | `src/agents/gotze_engine.py` | **Rewrite** G-score → IIS |
+| `demo-v1-metagpt/src/pipeline.py` | `src/pipeline/orchestrator.py` | **Rewrite** MetaGPT → LangGraph |
+| `demo-v1-metagpt/app.py` | `src/dashboard/app.py` | Reskin; add approve + IIS panel |
+| `demo-v1-metagpt/src/messages.py` | `src/contracts/messages.py` | Extend to v2 contract shapes |
 
 ---
 
@@ -160,7 +160,7 @@ synthetic CSV / Kaggle seed
 | **P5** | Dashboard + approve | 1 | Lane 3 | Streamlit v2 | Human approve works |
 | **P6** | Integration + demo freeze | 0.5 | Lane 5 | E2E tests, backup video | H16 equivalent |
 
-**Parallel hackathon path:** If P1–P6 cannot finish, **demo from forge-v1** (P0 only + rehearsal).
+**Parallel hackathon path:** If P1–P6 cannot finish, **demo from demo-v1-metagpt** (P0 only + rehearsal).
 
 ---
 
@@ -175,7 +175,7 @@ Without frozen contracts, Lane 1/2/3 will build incompatible modules. This is th
 ### HOW
 
 ```powershell
-cd "C:\Users\hp\Claude\Projects\PlantMind"
+cd "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt   # create from stack in LOCKED_STATE §5
@@ -323,7 +323,7 @@ GötzeEngine: score all candidate interventions, return ONE winner with IIS brea
 IIS = 0.35·ΔP + 0.25·ΔCost + 0.20·Feasibility + 0.15·History − 0.05·SafetyRisk
 ```
 
-**v1 reference:** See `src/legacy/forge-v1/src/gotze_engine.py` for G-score pattern — same structure, different terms.
+**v1 reference:** See `src/legacy/demo-v1-metagpt/src/gotze_engine.py` for G-score pattern — same structure, different terms.
 
 ### WHO
 Lane 1 (Sourav)
@@ -409,7 +409,7 @@ Judges see and touch the product. Approve button proves governance.
 | `src/dashboard/app.py` | Main Streamlit app |
 | `src/dashboard/components/iis_panel.py` | Winner + runner-up + gap |
 | `src/dashboard/components/audit_view.py` | Timeline + lineage |
-| `src/dashboard/components/proof_chart.py` | Port RED→GREEN from forge-v1 |
+| `src/dashboard/components/proof_chart.py` | Port RED→GREEN from demo-v1-metagpt |
 
 **Rule:** Dashboard imports **only** `requests` to API or reads JSON files — never `src/physics` or `src/agents` directly.
 
@@ -465,12 +465,12 @@ Hackathon is won on stage, not in docs.
 | T07 | Approve flow | audit record written |
 | T08 | RAG citation | ≥1 citation or "uncertain" |
 | T09 | Groq fallback | templates work when API down |
-| T10 | v1 fallback demo | forge-v1 app.py starts |
+| T10 | v1 fallback demo | demo-v1-metagpt app.py starts |
 | T11 | Scenario B | emergency_stop wins |
 | T12 | Scenario D | sensor dropout flagged as data issue |
 
 ### DEPENDS ON
-P0–P5 (or forge-v1 for T10 only)
+P0–P5 (or demo-v1-metagpt for T10 only)
 
 ---
 
@@ -508,16 +508,16 @@ P0–P5 (or forge-v1 for T10 only)
 START
   │
   ├─ Is it July 8+ ?
-  │     YES → Demo from forge-v1 ONLY. Freeze. Rehearse.
+  │     YES → Demo from demo-v1-metagpt ONLY. Freeze. Rehearse.
   │     NO  ↓
   │
   ├─ Is P3 (IIS) done?
-  │     NO  → Continue v2 build OR demo prep on forge-v1 in parallel
+  │     NO  → Continue v2 build OR demo prep on demo-v1-metagpt in parallel
   │     YES ↓
   │
   ├─ Is P5 (approve UI) done?
-  │     NO  → Demo forge-v1 + narrate v2 governance as "next sprint"
-  │     YES → Demo v2 as primary, forge-v1 as fallback video
+  │     NO  → Demo demo-v1-metagpt + narrate v2 governance as "next sprint"
+  │     YES → Demo v2 as primary, demo-v1-metagpt as fallback video
   │
   END
 ```
@@ -528,11 +528,11 @@ START
 
 ```powershell
 # Session start (any AI tool)
-cd "C:\Users\hp\Claude\Projects\PlantMind"
+cd "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"
 .\scripts\start-session.ps1
 
 # v1 demo (insurance)
-streamlit run src\legacy\forge-v1\app.py
+streamlit run src\legacy\demo-v1-metagpt\app.py
 
 # v2 API (when built)
 uvicorn src.api.main:app --reload

@@ -1,12 +1,17 @@
 # PlantMind — Grok / Agent Instructions
 
-**Canonical workspace:** `C:\Users\hp\Claude\Projects\PlantMind`  
+**Canonical workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`  
 **Read first:** `AI-OPERATING-SYSTEM.md` → `00-START-HERE.md` → `LOCKED_STATE.md` → `ROADMAP.md`
+
+## Coach + confirmation gate
+- **Before any file change:** PROPOSE sequential goals table — wait for **"Proceed with Goals"**
+- **After each goal:** goal completion log (why, artifacts, impacts, recommendations)
+- See `ops/workflows/confirmation-gate.md` and `ops/workflows/agentic-loop.md`
 
 ## Session start
 1. Read files above in order
 2. Summarize: project phase, top 3 ROADMAP NOW items, your assigned lane (ask if unclear)
-3. Never write to `../PlantMind/` or `../PlantMind_hckthn/` — archives only
+3. Never write to `../PlantMind_Archive/`, `../PlantMind_OS/`, or `../PlantMind_GitHub/` (except publish script)
 
 ## Build rules
 - Code: `src/` and `ml/` only
@@ -25,7 +30,7 @@ One task = one lane. See `ops/ROUTING.md`.
 - Weibull ships first; PINN is stretch only
 
 ## Demo path
-- **Runnable today:** `streamlit run src/legacy/forge-v1/app.py`
+- **Runnable today:** `streamlit run src/legacy/demo-v1-metagpt/app.py`
 - **Building toward:** `src/` per IMPLEMENTATION-GUIDE-ULTRA.md phases P0–P6
 
 ## Session close

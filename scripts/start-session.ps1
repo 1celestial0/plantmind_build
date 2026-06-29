@@ -1,7 +1,7 @@
 # PlantMind — Session Start Script
 # Run at the beginning of every work session (any AI tool)
 
-$Root = "C:\Users\hp\Claude\Projects\PlantMind"
+$Root = "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"
 Set-Location $Root
 
 Write-Host ""
@@ -45,6 +45,6 @@ Write-Host "  2. LOCKED_STATE.md"
 Write-Host "  3. ROADMAP.md"
 Write-Host "  4. docs/IMPLEMENTATION-GUIDE-ULTRA.md (if building)"
 Write-Host ""
-Write-Host "v1 demo: streamlit run src\legacy\forge-v1\app.py" -ForegroundColor Green
+Write-Host "v1 demo: streamlit run src\legacy\demo-v1-metagpt\app.py" -ForegroundColor Green
 Write-Host "Close: tell AI 'close session'" -ForegroundColor Green
 Write-Host ""

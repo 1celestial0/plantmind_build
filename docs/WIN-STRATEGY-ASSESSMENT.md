@@ -18,7 +18,7 @@ What you *can* have is a **high-confidence strategy** if you execute the right t
 | **Strategic alignment** | 8.5 | LTTS×Databricks partnership maps 1:1; COO quote on EI lifecycle; Sustainability segment fit | Name 1 LTTS client vertical in pitch |
 | **Story memorability** | 9.0 | Götze analogy is unique and true; judges remember stories | Rehearse 20+ times |
 | **Technical differentiation** | 8.0 | IIS + closed loop + proof — gap vs 12+ competitors documented | Show IIS term breakdown live |
-| **Working demo** | 7.5 | forge-v1 built; v2 not complete | Confirm live run + backup video |
+| **Working demo** | 7.5 | demo-v1-metagpt built; v2 not complete | Confirm live run + backup video |
 | **Agentic AI (rubric)** | 7.0 | v1 is structural agents, not LLM-driven; v2 fixes this | Agent trace panel + 5-agent narrative |
 | **Governance / trust** | 8.5 (v2 spec) / 6.0 (v1) | Human approve + audit locked in v2; not in v1 | Approve button or honest "production gate" slide |
 | **Scalability narrative** | 8.0 | Databricks Layer 1 mapping complete | 1 slide: DLT + Feature Store + Unity |
@@ -26,7 +26,7 @@ What you *can* have is a **high-confidence strategy** if you execute the right t
 | **Team coordination** | TBD | 4 lanes defined; integration checkpoints needed | H8/H16 checkpoints |
 
 **Composite (today):** ~7.8/10 — **strong contender, not guaranteed winner**  
-**Composite (if forge-v1 demo polished + pitch tight):** ~8.5/10 — **top-tier candidate**  
+**Composite (if demo-v1-metagpt demo polished + pitch tight):** ~8.5/10 — **top-tier candidate**  
 **Composite (if full v2 ships):** ~9.2/10 — **very strong, still not guaranteed**
 
 ---
@@ -41,7 +41,7 @@ What you *can* have is a **high-confidence strategy** if you execute the right t
 
 3. **Differentiated wedge:** Research on 12+ competitors shows predict-only incumbents. Your "decide + prove + approve" loop is a documented market gap (Gap 8 in competitive map).
 
-4. **Demo-able in 24h:** Weibull + IIS + Streamlit is buildable. forge-v1 already proves the hardest story beat (RED→GREEN).
+4. **Demo-able in 24h:** Weibull + IIS + Streamlit is buildable. demo-v1-metagpt already proves the hardest story beat (RED→GREEN).
 
 5. **IP potential:** Counterfactual proof + IIS scoring — defensible if prior-art handled honestly.
 
@@ -51,7 +51,7 @@ What you *can* have is a **high-confidence strategy** if you execute the right t
 
 | Risk | Severity | Mitigation |
 |---|---|---|
-| **Over-ambition (v2)** | HIGH | Ship forge-v1 demo; v2 is stretch |
+| **Over-ambition (v2)** | HIGH | Ship demo-v1-metagpt demo; v2 is stretch |
 | **Architecture confusion** | HIGH | One folder (Live), one demo path decision |
 | **Claiming unbuilt features** | HIGH | Demo only what runs; label rest "production" |
 | **LLM dependency on stage** | MEDIUM | Templated fallbacks mandatory |
@@ -78,22 +78,22 @@ From LTTS hackathon framing (COO Mritunjay Singh) and industry patterns:
 | Weight | What judges reward | PlantMind fit |
 |---|---|---|
 | High | Real-world engineering problem | ✅ Downtime, maintenance chaos |
-| High | Working demo, not slides | ⚠️ forge-v1 yes; v2 pending |
+| High | Working demo, not slides | ⚠️ demo-v1-metagpt yes; v2 pending |
 | High | EI across lifecycle | ✅ Operations/maintenance slice |
 | Medium | Global collaboration story | ✅ 4-member lane split |
 | Medium | Scalable / production path | ✅ Databricks narrative |
 | Medium | Innovation beyond AI hype | ✅ Deterministic IIS, not black-box |
 
 **Winning formula for PlantMind:**
-> Memorable story (Götze) + live demo (forge-v1) + honest governance slide + Databricks partnership tie + 5-minute rehearsed script + backup video
+> Memorable story (Götze) + live demo (demo-v1-metagpt) + honest governance slide + Databricks partnership tie + 5-minute rehearsed script + backup video
 
 ---
 
 ## Recommended win strategy (practical)
 
 ### Tier 1 — Must do (non-negotiable)
-- [ ] Decide: **forge-v1 is primary demo** until v2 P5 is done
-- [ ] Run `streamlit run src/legacy/forge-v1/app.py` — confirm no errors
+- [ ] Decide: **demo-v1-metagpt is primary demo** until v2 P5 is done
+- [ ] Run `streamlit run src/legacy/demo-v1-metagpt/app.py` — confirm no errors
 - [ ] Record 5-min backup video by July 8
 - [ ] Rehearse pitch 10+ times with Scenario A narrative
 - [ ] One slide: IIS formula + "human approve in production"
@@ -114,7 +114,7 @@ From LTTS hackathon framing (COO Mritunjay Singh) and industry patterns:
 
 | Outcome | Estimated probability* | Condition |
 |---|---|---|
-| Top 3 finish | 55–70% | forge-v1 demo polished + tight pitch |
+| Top 3 finish | 55–70% | demo-v1-metagpt demo polished + tight pitch |
 | Top 1 finish | 25–40% | Same + flawless live demo + strong Q&A |
 | Below top 5 | 15–25% | Demo fails live, over-claim, or team integration breaks |
 
@@ -128,7 +128,7 @@ You chose a **strong, well-researched, strategically aligned project**. The risk
 
 **Maximum win probability path:**
 1. Work only in `PlantMind`
-2. Demo from `src/legacy/forge-v1`
+2. Demo from `src/legacy/demo-v1-metagpt`
 3. Pitch the v2 vision (5 agents, IIS, approve) as the production roadmap
 4. Rehearse until boring
 

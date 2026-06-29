@@ -5,7 +5,7 @@
 
 ## 0. Project identity (LOCKED)
 - **Project:** PlantMind × Götze Engine — Physics-Informed Engineering Intelligence for industrial assets.
-- **Canonical workspace:** `C:\Users\hp\Claude\Projects\PlantMind`
+- **Canonical workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`
 - **Owner:** Sourav Dutta, Senior Data Engineer, LTTS.
 - **Event:** LTTS Global Engineering Intelligence Hackathon — 2026-07-09 (24h, OpenHack, 4 members).
 - **Strategic anchor (verified):** LTTS × Databricks Industrial AI / Engineering Intelligence partnership, announced 2026-06-11. Five joint areas: Predictive Asset Reliability, Energy & Emissions Optimization, OEE & Production Intelligence, Quality Intelligence, Sustainability Analytics.

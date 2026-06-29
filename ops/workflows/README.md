@@ -2,6 +2,13 @@
 
 Document runtime flows here before coding in `src/pipeline/`.
 
+## Active SOPs
+
+| File | Describes |
+|---|---|
+| `confirmation-gate.md` | Goals before actions · completion logs |
+| `agentic-loop.md` | Research → validate → Proceed with Goals |
+
 ## Planned files
 
 | File | Describes |

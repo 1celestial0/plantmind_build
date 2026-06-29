@@ -1,6 +1,6 @@
 # PlantMind — Gemini CLI Instructions
 
-**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind`
+**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`
 
 ## Before any task
 Read in order:

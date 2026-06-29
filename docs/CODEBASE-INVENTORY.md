@@ -1,5 +1,5 @@
 # Codebase Inventory & Lineage
-**Project:** PlantMind | **Updated:** 2026-06-29 | **Workspace:** `C:\Users\hp\Claude\Projects\PlantMind`
+**Project:** PlantMind | **Updated:** 2026-06-29 | **Workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`
 
 ---
 
@@ -8,17 +8,17 @@
 | Zone | Path | Files | Status | Role |
 |---|---|---|---|---|
 | v2 target | `src/` (excl. legacy) | scaffold | BUILD | Production codebase |
-| v1 reference | `src/legacy/forge-v1/` | 19 py/md | **RUNNABLE** | Hackathon demo |
+| v1 reference | `src/legacy/demo-v1-metagpt/` | 19 py/md | **RUNNABLE** | Hackathon demo |
 | ML | `ml/` | scaffold | BUILD | Data, training, synthesis |
 | Ops | `ops/` | 10+ | ACTIVE | Prompts, routing, registry |
 | Docs | `docs/` | 42+ | CANONICAL | Spec, research, legacy |
 | Deploy | `deploy/` | scaffold | PLAN | Local + Databricks |
 | Knowledge | `knowledge/obsidian-vault/` | many | REF | Obsidian graph |
-| Archive source | `_archive/PlantMind/*` | 235+ | **READ-ONLY** | Pre-merge snapshots |
+| Archive source | `PlantMind_Archive/*` | 235+ | **READ-ONLY** | Pre-merge snapshots |
 
 ---
 
-## 2. v1 runnable inventory (`src/legacy/forge-v1/`)
+## 2. v1 runnable inventory (`src/legacy/demo-v1-metagpt/`)
 
 | File | Layer | Input → Output | Lineage parent |
 |---|---|---|---|
@@ -34,7 +34,7 @@
 | `app.py` | Dashboard | pipeline → Streamlit UI | 4 tabs |
 | `run_demo.py` | CLI | synthetic demo | No install path |
 
-**Run:** `streamlit run src/legacy/forge-v1/app.py`
+**Run:** `streamlit run src/legacy/demo-v1-metagpt/app.py`
 
 ---
 
@@ -67,13 +67,13 @@
                     ┌───────────────┴───────────────┐
                     ▼                               ▼
             v1: RandomForest                  v2: Weibull H(t)
-            (forge-v1/model.py)               (src/physics/)
+            (demo-v1-metagpt/model.py)               (src/physics/)
                     │                               │
                     └───────────┬───────────────────┘
                                 ▼
                     EngineHealth / AssetHealthReport
                                 ▼
-              v1: G-score (forge-v1)  │  v2: IIS (src/agents/)
+              v1: G-score (demo-v1-metagpt)  │  v2: IIS (src/agents/)
                                 ▼
                     GötzeDecision + proof + audit
                                 ▼

@@ -1,6 +1,6 @@
 # PlantMind — Codex CLI Instructions
 
-**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind`
+**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`
 
 ## Read first (mandatory)
 1. `AI-OPERATING-SYSTEM.md`
@@ -12,7 +12,7 @@
 ## Write rules
 - Code: `src/`, `ml/`, `tests/` only
 - Never write to `_archive/` or sibling project folders
-- Match existing style in `src/legacy/forge-v1/` when porting
+- Match existing style in `src/legacy/demo-v1-metagpt/` when porting
 
 ## Close session
 Update ROADMAP + new Chat Context version + git commit on request.

@@ -1,8 +1,8 @@
 # PlantMind — START HERE (only entry point)
 
 > **One folder. One truth. One next step.**  
-> Path: `C:\Users\hp\Claude\Projects\PlantMind`  
-> Last updated: 2026-06-29
+> Path: `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`  
+> Last updated: 2026-06-30
 
 ---
 
@@ -10,15 +10,16 @@
 
 | Question | Answer |
 |---|---|
-| **Where do I work?** | Always this folder: `PlantMind` |
+| **Where do I work?** | Always: `PlantMind_live` (portfolio parent: `../`) |
 | **What do I read first?** | This file → `LOCKED_STATE.md` → `ROADMAP.md` (NOW section) |
-| **Where is the code?** | `src/` (build v2 here) · v1 runnable demo: `src/legacy/forge-v1/` |
+| **Where is the code?** | `src/` (build v2 here) · v1 runnable demo: `src/legacy/demo-v1-metagpt/` |
 | **Where are prompts?** | `ops/prompts/` |
 | **Where is research?** | `docs/research/` |
 | **How do I end a session?** | Say **"close session"** → updates `Chat Context/`, `ROADMAP.md`, git commit |
 
-**Archives (read-only):** `_archive/PlantMind/20260629_snapshot-*`  
-**New projects:** copy `_ProjectOS/` → `Projects\{NewName}/`
+**Archives (read-only):** `../PlantMind_Archive/20260629_snapshot-*`  
+**New projects:** copy `../PlantMind_OS/templates/` into a new `{Name}_live`  
+**Coach:** propose goals → you say **"Proceed with Goals"** (`ops/workflows/confirmation-gate.md`)
 
 **Share with team / management:**
 - `docs/deliverables/PlantMind_Ultra_Implementation_Team_Guide.docx` — **give this to engineers + TL**
@@ -138,7 +139,7 @@ Data → Physics → Agents → API → Dashboard
 
 | | v1 (built) | v2 (target) |
 |---|---|---|
-| Location | `src/legacy/forge-v1/` | `src/` here |
+| Location | `src/legacy/demo-v1-metagpt/` | `src/` here |
 | Model | 5 layers, MetaGPT, G-score | 5 agents, IIS, Weibull |
 | Demo | Streamlit RED→GREEN | 5-agent + human approve |
 | Status | **Runnable today** | **Scaffolded, migrate incrementally** |
@@ -151,10 +152,10 @@ Data → Physics → Agents → API → Dashboard
 
 ```powershell
 # Always start here
-cd "C:\Users\hp\Claude\Projects\PlantMind"
+cd "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"
 
 # Run v1 demo (until src/dashboard is wired)
-streamlit run src\legacy\forge-v1\app.py
+streamlit run src\legacy\demo-v1-metagpt\app.py
 
 # Session start (any AI tool)
 .\scripts\start-session.ps1

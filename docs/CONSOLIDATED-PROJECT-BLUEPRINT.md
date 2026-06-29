@@ -3,7 +3,7 @@
 **Version:** 1.0 Consolidated | **Date:** 29 June 2026  
 **Owner:** Sourav Dutta, Senior Data Engineer, LTTS  
 **Event:** LTTS Global Engineering Intelligence Hackathon — 9 July 2026  
-**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind`
+**Workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`
 
 ---
 
@@ -84,7 +84,7 @@ PlantMind has **three complementary views** of one product — not three product
 │  RUNTIME — 5 specialist agents (LangGraph sequence)              │
 │  Sentinel → Oracle → Götze → RootCause → Summarizer → Human     │
 ├─────────────────────────────────────────────────────────────────┤
-│  v1 REFERENCE (forge-v1) — Runnable proof of decision + chart    │
+│  v1 REFERENCE (demo-v1-metagpt) — Runnable proof of decision + chart    │
 │  5-layer MetaGPT pipeline · G-score · C-MAPSS · Streamlit        │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -167,7 +167,7 @@ PlantMind has **three complementary views** of one product — not three product
 | RAG | `src/rag/` |
 | Governance | `src/governance/` |
 | Dashboard | `src/dashboard/` |
-| v1 reference | `src/legacy/forge-v1/` |
+| v1 reference | `src/legacy/demo-v1-metagpt/` |
 | ML training | `ml/training/` |
 | Synthetic data | `ml/synthesis/` |
 | Deploy | `deploy/local/`, `deploy/databricks/` |
@@ -284,7 +284,7 @@ IIS(i) = 0.35·ΔP_failure + 0.25·ΔDowntimeCost + 0.20·Feasibility
 - SafetyRiskDelta above ceiling → hard veto  
 - Human approval required before action logged
 
-## 7.2 v1 implementation: G-score (forge-v1)
+## 7.2 v1 implementation: G-score (demo-v1-metagpt)
 
 ```
 G = 0.40·ΔHealth + 0.25·(1−NormCost) + 0.20·(1−NormTime) + 0.15·Safety
@@ -408,7 +408,7 @@ Pump health drifts → crosses threshold → 5 agents fire → **"reduce load + 
 ## 10.4 v1 demo (available today)
 
 ```powershell
-cd C:\Users\hp\Claude\Projects\PlantMind\src\legacy\forge-v1
+cd C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live\src\legacy\demo-v1-metagpt
 streamlit run app.py
 ```
 
@@ -478,7 +478,7 @@ Value = (failures_prevented) × (avg_downtime_hours) × (cost_per_hour) − inte
 
 - **Strongest claims:** Counterfactual proof engine; IIS scoring method; closed decision loop  
 - **Framing:** Patent-candidate, pending prior-art review — never "no one has done this"  
-- **Files:** `src/legacy/forge-v1/PATENT_IDEAS.md`
+- **Files:** `src/legacy/demo-v1-metagpt/PATENT_IDEAS.md`
 
 ---
 
@@ -503,7 +503,7 @@ Value = (failures_prevented) × (avg_downtime_hours) × (cost_per_hour) − inte
 
 # §16 Implementation status and roadmap
 
-| Component | v1 forge-v1 | v2 target | Status |
+| Component | v1 demo-v1-metagpt | v2 target | Status |
 |---|---|---|---|
 | Data ingest C-MAPSS | ✅ | ✅ | Built |
 | Weibull multi-asset | ❌ | ✅ | Specified |
@@ -551,7 +551,7 @@ Value = (failures_prevented) × (avg_downtime_hours) × (cost_per_hour) − inte
 
 | Version | Folder | Role |
 |---|---|---|
-| v1 | PlantMind/FORGE → `src/legacy/forge-v1/` | Runnable reference |
+| v1 | PlantMind/FORGE → `src/legacy/demo-v1-metagpt/` | Runnable reference |
 | v2 vault | PlantMind_hckthn → `docs/architecture/` | Locked specification |
 | Live | PlantMind | **Canonical workspace** |
 

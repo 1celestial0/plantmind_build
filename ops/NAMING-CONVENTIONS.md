@@ -7,12 +7,18 @@
 ## 1. Project folder layout (portfolio)
 
 ```
-C:\Users\hp\Claude\Projects\
-├── _ProjectOS\              # Template — copy to start new project
-├── _archive\
-│   └── {ProjectName}\
-│       └── YYYYMMDD_snapshot-{label}\   # Frozen, read-only
-└── {ProjectName}\           # ONE active workspace per project
+C:\Users\hp\Claude\Projects\{PortfolioName}\
+├── {Name}_live\               # ONE active workspace (git repo)
+├── {Name}_OS\                 # Template — copy to start new project
+├── {Name}_Archive\            # YYYYMMDD_snapshot-{label}\ — frozen, read-only
+└── {Name}_GitHub\             # Public publish target (script-fed)
+
+PlantMind example:
+C:\Users\hp\Claude\Projects\PlantMind\
+├── PlantMind_live\
+├── PlantMind_OS\
+├── PlantMind_Archive\
+└── PlantMind_GitHub\
 ```
 
 ---
@@ -56,7 +62,7 @@ C:\Users\hp\Claude\Projects\
 | Contracts | `src/contracts/{domain}.py` | `physics.py` |
 | API routes | `src/api/routes/{resource}.py` | `assets.py` |
 | Tests | `tests/test_{module}.py` | `test_gotze_iis.py` |
-| Legacy code | `src/legacy/{label}/` | `forge-v1/` |
+| Legacy code | `src/legacy/{label}/` | `demo-v1-metagpt/` |
 | Config | `snake_case.yaml` | `plant_config.yaml` |
 
 ---
@@ -78,7 +84,7 @@ C:\Users\hp\Claude\Projects\
 |---|---|
 | G-score vs IIS | **IIS** in new code; `g_score` alias in legacy only |
 | 5 layers vs 5 agents | **agents** in runtime; **layers** in data pipeline docs |
-| FORGE vs src | **src/** for new; **src/legacy/forge-v1/** frozen |
+| FORGE vs src | **src/** for new; **src/legacy/demo-v1-metagpt/** frozen |
 | PlantMind | **PlantMind** (retired name) |
 | IIS (formula) vs IIS (framework) | **IIS-score** vs **IIS-framework** in prose |
 

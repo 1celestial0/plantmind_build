@@ -62,20 +62,20 @@ def build():
     tbl(doc, ["Question", "Answer"], [
         ("What is it?", "Physics-Informed Engineering Intelligence + Götze Decision Engine"),
         ("What is it NOT?", "Not a chatbot, not a dashboard-only tool, not three projects"),
-        ("Workspace", r"C:\Users\hp\Claude\Projects\PlantMind"),
+        ("Workspace", r"C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"),
         ("Event", "LTTS Global EI Hackathon · 9 July 2026 · 24h · 4 members"),
         ("Tagline", "Predict the failure. Decide the fix. Prove it."),
     ])
 
     h(doc, "Two Implementations — One Product", 2)
-    tbl(doc, ["", "v1 forge-v1 (BUILT)", "v2 src/ (TARGET)"], [
-        ("Location", "src/legacy/forge-v1/", "src/"),
+    tbl(doc, ["", "v1 demo-v1-metagpt (BUILT)", "v2 src/ (TARGET)"], [
+        ("Location", "src/legacy/demo-v1-metagpt/", "src/"),
         ("Architecture", "5-layer MetaGPT", "5-agent LangGraph"),
         ("Scoring", "G-score", "IIS (canonical)"),
         ("Health", "RandomForest C-MAPSS", "Weibull multi-asset"),
         ("Hackathon", "SHIP THIS if time short", "Build toward post-demo"),
     ])
-    doc.add_paragraph("Rule: LOCKED_STATE.md is product truth. forge-v1 is insurance demo.")
+    doc.add_paragraph("Rule: LOCKED_STATE.md is product truth. demo-v1-metagpt is insurance demo.")
 
     h(doc, "PART 1 — Codebase Lineage", 1)
     h(doc, "v1 Data Lineage (Built)", 2)
@@ -156,7 +156,7 @@ def build():
          "Judges touch the product. Governance proof.",
          "Streamlit reads API only; approve → POST /approve.",
          "Lane 3 — Members 2/3",
-         "src/dashboard/app.py; iis_panel; proof_chart from forge-v1",
+         "src/dashboard/app.py; iis_panel; proof_chart from demo-v1-metagpt",
          "Manual Scenario A + approve/reject"),
         ("P6", "Integration & Demo Freeze",
          "Won on stage not in docs.",
@@ -183,7 +183,7 @@ def build():
         ("T07", "Approve flow", "audit written"),
         ("T08", "RAG citation", "citation or uncertain"),
         ("T09", "LLM fallback", "templates when Groq down"),
-        ("T10", "v1 fallback", "forge-v1 app starts"),
+        ("T10", "v1 fallback", "demo-v1-metagpt app starts"),
         ("T11", "Scenario B", "emergency_stop wins"),
         ("T12", "Scenario D", "sensor dropout = data issue"),
     ])
@@ -199,14 +199,14 @@ def build():
     doc.add_paragraph("PR rule: never merge contract changes without LOCKED_STATE vault update.")
 
     h(doc, "PART 5 — Hackathon Decision Tree", 1)
-    doc.add_paragraph("July 8+ → demo forge-v1 ONLY, freeze, rehearse.")
-    doc.add_paragraph("P3 not done → build v2 OR prep forge-v1 demo in parallel.")
-    doc.add_paragraph("P5 not done → demo forge-v1 + narrate v2 governance as production roadmap.")
-    doc.add_paragraph("P5 done → demo v2 primary, forge-v1 as backup video.")
+    doc.add_paragraph("July 8+ → demo demo-v1-metagpt ONLY, freeze, rehearse.")
+    doc.add_paragraph("P3 not done → build v2 OR prep demo-v1-metagpt demo in parallel.")
+    doc.add_paragraph("P5 not done → demo demo-v1-metagpt + narrate v2 governance as production roadmap.")
+    doc.add_paragraph("P5 done → demo v2 primary, demo-v1-metagpt as backup video.")
 
     h(doc, "PART 6 — Win Strategy (Honest)", 1)
     doc.add_paragraph("There is NO 200% win guarantee. Estimated composite score today: 7.8/10.")
-    doc.add_paragraph("With polished forge-v1 demo + tight pitch: 8.5/10 — top-tier candidate.")
+    doc.add_paragraph("With polished demo-v1-metagpt demo + tight pitch: 8.5/10 — top-tier candidate.")
     tbl(doc, ["Dimension", "Score", "Action"], [
         ("Strategic alignment", "8.5/10", "Name LTTS client vertical"),
         ("Story", "9.0/10", "Rehearse Götze hook 20x"),
@@ -217,7 +217,7 @@ def build():
     doc.add_paragraph(
         "You chose the RIGHT project for LTTS EI hackathon. Risk is execution clarity, not the idea."
     )
-    doc.add_paragraph("Maximum win path: PlantMind only → demo forge-v1 → pitch v2 vision → rehearse.")
+    doc.add_paragraph("Maximum win path: PlantMind only → demo demo-v1-metagpt → pitch v2 vision → rehearse.")
 
     h(doc, "PART 7 — Multi-AI Operating System", 1)
     tbl(doc, ["Tool", "Entry file", "Session start"], [
@@ -231,9 +231,9 @@ def build():
 
     h(doc, "Appendix — Commands", 1)
     cmds = [
-        r'cd "C:\Users\hp\Claude\Projects\PlantMind"',
+        r'cd "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"',
         r".\scripts\start-session.ps1",
-        r"streamlit run src\legacy\forge-v1\app.py",
+        r"streamlit run src\legacy\demo-v1-metagpt\app.py",
         r"uvicorn src.api.main:app --reload",
         r"pytest tests/ -v",
     ]

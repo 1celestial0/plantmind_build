@@ -3,7 +3,7 @@
 ## v1 (today — FORGE fallback)
 
 ```powershell
-cd "C:\Users\hp\Claude\Projects\PlantMind"
+cd "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"
 pip install -r FORGE/requirements.txt
 streamlit run FORGE/app.py
 ```
@@ -13,7 +13,7 @@ streamlit run FORGE/app.py
 ## v2 (target — from PlantMind)
 
 ```powershell
-cd "C:\Users\hp\Claude\Projects\PlantMind"
+cd "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"
 # streamlit run src/dashboard/app.py   # when wired
 # uvicorn src.api.main:app --reload    # when API ready
 ```

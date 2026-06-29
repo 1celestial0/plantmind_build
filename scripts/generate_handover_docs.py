@@ -128,7 +128,7 @@ def build_word_doc():
         "Layer 0 — 7 tool-agnostic interface contracts (LTTS IP)",
         "Layer 1 — Local hackathon build + Databricks production narrative",
         "Runtime — 5 specialist agents in LangGraph sequence",
-        "v1 Reference — forge-v1: runnable MetaGPT pipeline with RED→GREEN proof",
+        "v1 Reference — demo-v1-metagpt: runnable MetaGPT pipeline with RED→GREEN proof",
     ]:
         doc.add_paragraph(item, style="List Bullet")
 
@@ -186,7 +186,7 @@ def build_word_doc():
         "+ 0.15·HistoricalSuccess − 0.05·SafetyRiskDelta"
     )
     doc.add_paragraph(
-        "v1 G-score (forge-v1): G = 0.40·ΔHealth + 0.25·(1−NormCost) + 0.20·(1−NormTime) "
+        "v1 G-score (demo-v1-metagpt): G = 0.40·ΔHealth + 0.25·(1−NormCost) + 0.20·(1−NormTime) "
         "+ 0.15·Safety — retained as runnable reference; IIS is canonical for product IP."
     )
     doc.add_paragraph("Proof stack: IIS ranking + RED→GREEN chart + audit hash-chain + human approval.")
@@ -225,7 +225,7 @@ def build_word_doc():
         ("C — Intermittent valve", "Mahalanobis pattern depth"),
         ("D — Sensor dropout", "Data quality vs machine fault"),
     ])
-    doc.add_paragraph("v1 demo today: streamlit run src/legacy/forge-v1/app.py")
+    doc.add_paragraph("v1 demo today: streamlit run src/legacy/demo-v1-metagpt/app.py")
 
     add_heading(doc, "§11 Technology Stack", 1)
     add_table(doc, ["Layer", "Technology"], [
@@ -433,7 +433,7 @@ def build_ppt():
         "Layer 0: 7 tool-agnostic interface contracts (LTTS IP)",
         "Layer 1: Local hackathon build + Databricks production narrative",
         "Runtime: 5 agents — Sentinel → Oracle → Götze → RCA → Summarizer",
-        "v1 Reference: forge-v1 MetaGPT pipeline with RED→GREEN proof (runnable)",
+        "v1 Reference: demo-v1-metagpt MetaGPT pipeline with RED→GREEN proof (runnable)",
         "Conflict resolved: IIS canonical · Weibull canonical · LangGraph canonical",
     ])
 
@@ -461,7 +461,7 @@ def build_ppt():
         "All terms normalized [0,1] · Demo uses fixed weights",
         "SafetyRiskDelta above ceiling → hard veto regardless of score",
         "Proof: IIS breakdown + RED→GREEN chart + audit hash-chain",
-        "v1 G-score retained in forge-v1 as runnable reference implementation",
+        "v1 G-score retained in demo-v1-metagpt as runnable reference implementation",
     ])
 
     add_content_slide(prs, "Model Routing", [
@@ -486,7 +486,7 @@ def build_ppt():
         "B Sudden bearing impact — emergency stop, high IIS gap",
         "C Intermittent valve — Mahalanobis catches hidden pattern",
         "D Sensor dropout — flags bad data, not bad machine",
-        "v1 demo: streamlit run src/legacy/forge-v1/app.py",
+        "v1 demo: streamlit run src/legacy/demo-v1-metagpt/app.py",
         "5-min script: Hook → healthy plant → failure → approve → edge case → close",
     ])
 
