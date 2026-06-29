@@ -1,0 +1,15 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+ml/data/raw/*
+!ml/data/raw/.gitkeep
+ml/data/chroma/
+ml/models/*.pkl
+ml/models/*.joblib
+.DS_Store
+Thumbs.db
+*.log
