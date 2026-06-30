@@ -13,3 +13,12 @@ ml/models/*.joblib
 .DS_Store
 Thumbs.db
 *.log
+
+# session/tooling scratch (not part of the product)
+agent-tools/
+mcps/
+terminals/
+continuity/last-test-results.xml
+.env
+*.key
+*.pem
