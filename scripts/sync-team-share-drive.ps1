@@ -62,4 +62,6 @@ Write-Host "  Copied : $copied files"
 Write-Host "  Staging: $staging"
 Write-Host "  Drive  : $($state.drive_folder_id)"
 Write-Host ""
-Write-Host "Upload staging folder to Google Drive, or re-run from Claude CLI with Drive MCP." -ForegroundColor Cyan
+Write-Host "Next: python scripts\upload_to_drive.py  (needs Drive OAuth scope)" -ForegroundColor Yellow
+Write-Host "Or upload staging folder manually to Drive folder ID above." -ForegroundColor Cyan
+Write-Host "Or from Claude CLI: say 'sync to drive' (Google Drive MCP enabled)." -ForegroundColor Cyan
