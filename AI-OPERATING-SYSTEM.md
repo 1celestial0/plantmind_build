@@ -42,8 +42,9 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-status.ps1
 **Team playbook (human + AI):** `ops/TEAM-OPERATIONS-PLAYBOOK.md`  
 **CLI parity:** `ops/CLI-PARITY.md` — identical behavior in every tool
 
-**Read order:** `00-START-HERE` → `LOCKED_STATE` → Chat Context (latest `vX.Y`) → `ROADMAP` NOW  
-**Building:** `docs/00-MASTER-SPEC.md` + phase guide · declare lane · `ops/ROUTING.md`
+**Read order:** `PROJECT-DNA` (apex constitution) → `LOCKED_STATE` → `00-START-HERE` → Chat Context (latest `vX.Y`) → `ROADMAP` NOW  
+**Building:** `PROJECT-DNA.md` §6 (feature inventory) + `docs/IMPLEMENTATION-GUIDE-ULTRA.md` · declare lane · `ops/ROUTING.md`  
+**Precedence:** any doc that disagrees with `PROJECT-DNA.md` is wrong until a numbered Amendment changes the DNA. (`docs/00-MASTER-SPEC.md` was archived 2026-07-01 → superseded by the DNA.)
 
 **Close:** say **"close session"** → propose close goals → on confirm: ROADMAP + new Chat Context + `git commit`
 

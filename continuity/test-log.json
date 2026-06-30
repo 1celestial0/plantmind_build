@@ -3,6 +3,16 @@
   "project": "PlantMind",
   "runs": [
     {
+      "run_id": "lane2-physics-2026-06-30",
+      "timestamp": "2026-06-30T04:43:00.000000+00:00",
+      "trigger": "lane2-build",
+      "passed": 46,
+      "failed": 0,
+      "total": 46,
+      "notes": "Lane 2 complete: src/physics/ (32 new tests) + ml/synthesis/ generator verified. 15000-row dataset written to ml/data/synthetic/.",
+      "cases": []
+    },
+    {
       "run_id": "3cd7bf00-112c-41cf-a75d-7143833a784d",
       "timestamp": "2026-06-29T22:51:44.807641+00:00",
       "trigger": "session-close",

@@ -1,4 +1,4 @@
-# PlantMind — one-screen project status (human or AI reference)
+# PlantMind - one-screen project status (human or AI reference)
 
 param(
     [string]$Root = "C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live"
@@ -8,7 +8,7 @@ Set-Location $Root
 
 Write-Host ""
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "  PlantMind — Status Check" -ForegroundColor Cyan
+Write-Host "  PlantMind - Status Check" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
@@ -16,7 +16,7 @@ Write-Host ""
 $statePath = Join-Path $Root "continuity\STATE.json"
 if (Test-Path $statePath) {
     $state = Get-Content $statePath -Raw | ConvertFrom-Json
-    Write-Host "Context : $($state.latest_context_version) — $($state.latest_context_file)" -ForegroundColor Yellow
+    Write-Host "Context : $($state.latest_context_version) - $($state.latest_context_file)" -ForegroundColor Yellow
     Write-Host "Open items (last close): $($state.roadmap_open_items_last_close)"
 }
 
@@ -47,10 +47,10 @@ if (Test-Path $testLog) {
         $last = $tl.runs[-1]
         Write-Host ""
         Write-Host "Last test run:" -ForegroundColor Yellow
-        Write-Host "  $($last.timestamp) — passed $($last.passed) / failed $($last.failed)"
+        Write-Host "  $($last.timestamp) - passed $($last.passed) / failed $($last.failed)"
     } else {
         Write-Host ""
-        Write-Host "Last test run: (none — run scripts/run-tests.ps1)" -ForegroundColor DarkGray
+        Write-Host "Last test run: (none - run scripts/run-tests.ps1)" -ForegroundColor DarkGray
     }
 }
 

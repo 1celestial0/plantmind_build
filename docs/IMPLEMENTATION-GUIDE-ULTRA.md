@@ -4,6 +4,8 @@
 **Audience:** Technical members, TL, Delivery Manager, reviewers  
 **Workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live` (ONLY folder to work in)
 
+> ⚠️ **DERIVED DOC — not a source of truth.** Conform to `/PROJECT-DNA.md` v1.0 (apex) + `LOCKED_STATE.md`. Where this guide differs, the DNA wins. **Deltas since 29 Jun:** now **6 agents** (added MaintenanceScheduler, C2) not 5 · **config-driven pipeline** is a co-equal pillar (P2) · **light UI** (C3) · v1 `src/legacy/demo-v1-metagpt/` is **archived** at `/archive/2026-07-01_v2-consolidation/` (the "ship v1 if time runs out" line is void — local v2 static path is the fallback, C9). Feature scope = DNA §6 (F-01…F-15).
+
 ---
 
 # PART 0 — WHAT IS THIS PROJECT? (Read this first)

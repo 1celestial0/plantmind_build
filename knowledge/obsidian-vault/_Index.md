@@ -1,91 +1,39 @@
-# PlantMind Knowledge Graph
-## Map of Content (MOC) — Start Here
-
-> **How to use this vault in Obsidian:**
-> Open Obsidian → "Open folder as vault" → select `PlantMind/Knowledge Graph/`
-> Click the graph icon (top right) to see all nodes and connections.
-> Click any `[[linked concept]]` to navigate the graph.
-
+---
+title: PlantMind Knowledge Vault (v2 — Source of Truth)
+updated: 2026-07-01
+derived_from: /PROJECT-DNA.md v1.0
 ---
 
-## 🧠 Core Concepts
+# 🧠 PlantMind Knowledge Vault — v2 (Source of Truth)
 
-- [[Götze Score]] — The core IP. How PlantMind makes decisions.
-- [[Counterfactual Proof]] — How PlantMind PROVES the fix works.
-- [[Remaining Useful Life]] — What the ML model predicts.
-- [[Surrogate Twin]] — The simulated engine used in counterfactuals.
-- [[RED-GREEN Transition]] — The "money shot" of the demo.
-- [[Asset Health]] — How we classify engine state.
+> **This vault is a DERIVED, living mirror of the locked truth — never an independent source.**
+> Canonical order: **[[PROJECT-DNA]]** (L0) ▸ **[[LOCKED_STATE]]** (L1) ▸ this vault (L2 rendering).
+> If this vault disagrees with `PROJECT-DNA.md`, the DNA wins. **Maintenance rule:** update this vault at every DNA Amendment / LOCKED_STATE VAULT UPDATE / session close.
+> The v1 vault (RandomForest/MetaGPT/Surrogate-Twin era) is archived at `/archive/2026-07-01_v2-consolidation/knowledge-obsidian-vault-v1/` — historical only.
 
----
+## 0. Canonical files (the truth this vault mirrors)
+- [[PROJECT-DNA]] — identity, pillars, scope fence, features, rubric → `/PROJECT-DNA.md`
+- [[LOCKED_STATE]] — contracts, λ/β, thresholds, lanes → `/LOCKED_STATE.md`
+- Code lineage → `../code-lineage-vault/_Index`
 
-## 🏗️ Architecture Layers
+## 1. Identity (from DNA §2)
+- **What:** config-driven, physics-informed, agentic **decision fabric**.
+- **NOT:** a digital twin / alerting tool / generic agent builder.
+- **Two pillars:** [[Pillar-P1-Closed-Loop]] · [[Pillar-P2-Config-Driven]]
+- **Positioning:** "config-driven decision fabric that turns existing plant data and digital twins into trusted, physics-grounded, auditable engineering actions — at scale, across any asset class, without rip-and-replace."
 
-- [[Layer 1 - Data]] — C-MAPSS ingestion + RUL labeling
-- [[Layer 2 - Features]] — Rolling window feature engineering
-- [[Layer 3 - Prediction]] — RandomForest RUL model
-- [[Layer 4 - Götze Engine]] — Decision engine (CORE IP)
-- [[Layer 5 - Proof and Learn]] — Dashboard + recalibration
+## 2. Maps of Content (MOCs)
+- [[Agents-MOC]] — the 6 agents
+- [[Features-MOC]] — the 15 features (F-01…F-15)
+- [[Decisions-CLOSED]] — the un-reopenable decisions (C1…C10)
+- [[Concepts-MOC]] — IIS, Weibull health, RUL, Götze moment, audit/hash-chain
+- [[Rubric]] — the 8-dimension scorecard (current 70.3%)
 
----
+## 3. The 6 Agents (from DNA §4 / LOCKED_STATE §1)
+DataSentinel → AssetHealthOracle → **GötzeEngine ⭐** → RootCauseAnalyst → ExecutiveSummarizer → **MaintenanceScheduler ⭐**
 
-## ⚖️ Key Engineering Decisions
-
-- [[Decision - RandomForest over LSTM]] — Why not deep learning?
-- [[Decision - Deterministic over LLM Scoring]] — Why math, not AI, decides
-- [[Decision - Clip RUL at 130]] — Why cap the label?
-- [[Decision - Window Size 30]] — Why 30 cycles, not 10 or 50?
-- [[Decision - RED Threshold 30]] — Why 30 cycles = critical?
-
----
-
-## 🔬 Patent Portfolio
-
-- [[Patent 1 - Counterfactual Proof Engine]] — Strongest claim
-- [[Patent 2 - Götze Scoring Method]] — Deterministic wrapper over AI
-- [[Patent 3 - Domain Adaptive KB]] — Self-bootstrapping knowledge
-- [[Patent 4 - Research Augmented MetaGPT]] — Live standards validation layer
+## 4. Closed decisions (do not relitigate — DNA §3)
+C1 two pillars · C2 MaintenanceScheduler · C3 light UI · C4 full config pipeline (+H-16 fallback) · C5 PINN stretch · C6 fixed IIS weights · C7 synthetic data by design · C8 demo shape (3 assets/PUMP-001/$180k) · C9 local demo spine · C10 Groq cached fallback.
 
 ---
-
-## ⚙️ Technology Stack
-
-- [[NASA C-MAPSS]] — The dataset
-- [[MetaGPT]] — The multi-agent framework we build on
-- [[MLflow]] — Model tracking + registry
-- [[Delta Lake]] — Versioned feature storage
-- [[Databricks]] — Cloud deployment platform
-- [[Streamlit]] — Demo UI framework
-
----
-
-## 🔗 Key Relationships (read this first)
-
-```
-[[NASA C-MAPSS]]
-    → feeds → [[Layer 1 - Data]]
-    → produces → [[Remaining Useful Life]]
-
-[[Remaining Useful Life]]
-    → predicted by → [[Layer 3 - Prediction]]
-    → flags → [[Asset Health]] (RED if RUL < 30)
-
-[[Asset Health]] RED
-    → triggers → [[Layer 4 - Götze Engine]]
-    → scores via → [[Götze Score]]
-    → produces → [[Counterfactual Proof]]
-    → visualized as → [[RED-GREEN Transition]]
-
-[[Götze Score]]
-    → depends on → [[Surrogate Twin]] (for ΔHealth term)
-    → is protected by → [[Patent 1 - Counterfactual Proof Engine]]
-    → is protected by → [[Patent 2 - Götze Scoring Method]]
-
-[[MetaGPT]]
-    → extended by → [[Patent 3 - Domain Adaptive KB]]
-    → extended by → [[Patent 4 - Research Augmented MetaGPT]]
-```
-
----
-
-*Last updated: 2026-06-20 · Add new nodes freely — Obsidian will auto-link them*
+*Seeded 2026-07-01. Populate [[Agents-MOC]], [[Features-MOC]], [[Decisions-CLOSED]], [[Concepts-MOC]] as living notes; each must cite its DNA/LOCKED_STATE source line.*
