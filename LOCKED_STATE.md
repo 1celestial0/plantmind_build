@@ -14,7 +14,7 @@
   2. **Config-driven modularity** — a declarative Plant Config Manifest composes the whole stack; onboarding a new plant/asset/use-case is a *config change, not a code deploy*. (The scale/CoE/productization wedge.) See §9.
 - **One-sentence positioning (LOCKED):** "PlantMind is the config-driven decision fabric that turns existing plant data and digital twins into trusted, physics-grounded, auditable engineering actions — at scale, across any asset class, without rip-and-replace."
 
-## 1. The 5 agents (LOCKED — hackathon scope)
+## 1. The 6 agents (LOCKED — hackathon scope)
 1. **DataSentinel** — flags sensor anomalies (Z-score + Mahalanobis). Flags only.
 2. **AssetHealthOracle** — health 0–100 + RUL + CI (Weibull). Reports only.
 3. **GötzeEngine** ⭐ — scores candidate interventions via IIS → one best action. **Requires human approval.**
