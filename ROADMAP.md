@@ -1,5 +1,5 @@
 # ROADMAP - PlantMind
-_Last updated: 2026-06-30 · paired with context v1.6 · session in progress_
+_Last updated: 2026-06-30 · paired with context v1.7_
 
 ## Growth ledger
 | Date | Context version | Items added | Items completed | Net delta | Open items total |
@@ -11,9 +11,16 @@ _Last updated: 2026-06-30 · paired with context v1.6 · session in progress_
 | 2026-06-30 | v1.4 | 2 | 1 | +1 | 3 |
 | 2026-06-30 | v1.5 | 0 | 2 | -2 | 1 |
 | 2026-06-30 | v1.6 | 0 | 1 | -1 | 0 |
+| 2026-06-30 | v1.7 | 5 | 8 | -3 | 5 |
 
 ## NOW
-- [x] Lane 3: `src/dashboard/` Streamlit — Plant Overview + GötzeDecision + Audit Log (all pages verified in browser) — 2026-06-30
+- [ ] Lane 5: Judge Q&A bank + ROI calculator (`ops/runbooks/`) — HIGH priority, 9 days to hackathon
+- [ ] Wire GROQ_API_KEY env var for real LLM-backed RCA + executive brief
+- [ ] Outcome logger UI: wire `log_outcome()` into Audit Log page so operators can record outcomes
+
+## NEXT
+- [ ] Lane 4: `deploy/databricks/` runbook + notebook skeleton
+- [ ] 2-tier testing framework: add `smoke` + `heavy` pytest markers to `tests/conftest.py`
 
 ## NEXT
 - [ ] Lane 3: `src/dashboard/` mockups → Streamlit shell (read-only contracts)
@@ -55,3 +62,11 @@ _Last updated: 2026-06-30 · paired with context v1.6 · session in progress_
 - [x] Lane 2: `src/physics/` Weibull engine + `ml/synthesis/` generator (15k rows, 32 tests) — 2026-06-30
 - [x] Lane 1: 5 agents + orchestrator + FastAPI + governance + RAG stub (78 tests, 6.5ms/call) — 2026-06-30
 - [x] Lane 3: Streamlit dashboard — Plant Overview (gauge + RUL bar + anomaly badges), GötzeDecision (IIS chart + approval gate), Audit Log (lineage table) — 2026-06-30
+- [x] Fleet Operations Center: 5-plant fleet view, sector-tagged cards, $3.17M savings KPI, nav to plant drill-down — 2026-06-30
+- [x] Weibull dual-path projection: historical/do-nothing/act-now with maintenance window rect — 2026-06-30
+- [x] Signal Anomaly Waterfall: 5-signal subplot, red anomaly highlights, last 45 cycles — 2026-06-30
+- [x] Savings Decay Timeline + What-If ROI panel ($540k vs $70k = $470k net saving) — 2026-06-30
+- [x] Failure Injector sidebar + 5 named failure patterns + cascade chain visualization — 2026-06-30
+- [x] Live Feed toggle + speed selector (1x/5x/10x) with synthetic twin mode — 2026-06-30
+- [x] Groq LLM integration (llama-3.3-70b) with template fallback for RCA + executive brief — 2026-06-30
+- [x] RL feedback loop: `ml/feedback/outcome_logger.py` + Model Accuracy KPI in fleet overview — 2026-06-30

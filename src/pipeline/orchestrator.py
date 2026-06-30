@@ -76,6 +76,7 @@ def run(reading: SensorReading) -> PipelineResult:
             flagged_signals=sentinel.flagged_signals,
             rul_days=health_report.rul_days,
             health_score=health_report.health_score,
+            cycle=reading.cycle,
         )
         lineage.append(LineageEntry(stage="root_cause", actor="RootCauseAnalyst", timestamp=now))
 
