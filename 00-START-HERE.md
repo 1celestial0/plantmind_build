@@ -64,11 +64,30 @@ Full routing: `ops/ROUTING.md`
 
 ---
 
-## Session ritual
+## Session lifecycle (the CLI SOP)
 
-**START:** read `PROJECT-DNA` → `LOCKED_STATE` → latest `Chat Context/` → `ROADMAP` NOW → AI gives top-3 NOW items.
-**WORK:** one lane per chat · code only in `src/` or `ml/` · contract changes → LOCKED_STATE vault update · features must have a DNA §6 entry first.
-**CLOSE:** re-score DNA §7 rubric · update both Obsidian vaults (DNA §8.6) · ROADMAP update · new `Chat Context/YYYY-MM-DD_vX.Y` · `git commit`.
+| Phase | Say / do | What happens |
+|---|---|---|
+| **START** | open terminal in `PlantMind_live`, launch CLI | AI reads `PROJECT-DNA` → `LOCKED_STATE` → latest `Chat Context/` → `ROADMAP` NOW, then proposes ≤3–5 sequential goals |
+| **CONFIRM** | **"Proceed with Goals"** (or `G1 only`) | AI starts work — never writes before this |
+| **WORK** | stay in **one lane** | code only in `src/`/`ml/` · contract change → LOCKED_STATE vault update · feature needs a DNA §6 entry first · AI logs each goal (why/artifacts/impact) |
+| **PAUSE** (short break, same task) | **"pause"** | AI commits WIP (`git commit -m "wip: …"`) + writes a one-line state to `ROADMAP` NOW. No full close. Resume is clean. |
+| **RESUME** | **"resume"** | AI re-runs START reads + `git log -1` / `git status`, picks up the in-progress NOW item |
+| **CLOSE** (end of work) | **"close session"** | re-score DNA §7 rubric · update both Obsidian vaults (§8.6) · ROADMAP update · new `Chat Context/YYYY-MM-DD_vX.Y` · `git commit` |
+| **RESTART** (clean slate / went sideways) | **"restart"** | close properly first; OR if corrupted, `git reset --hard <last-good>` then re-orient from `PROJECT-DNA` |
+
+**Switching CLI (Claude ↔ Grok ↔ Gemini):** always **CLOSE or PAUSE (commit) first** — the next tool reads the same committed truth.
+
+## Artifact create/update SOP (where things go)
+| Artifact | Home | Rule |
+|---|---|---|
+| Product idea / scope / feature | `PROJECT-DNA.md` | change via numbered Amendment (§10) |
+| Contracts / λ-β / thresholds | `LOCKED_STATE.md` + `src/contracts/` | change via 🔒 VAULT UPDATE (paired) |
+| Research findings | `docs/research/` | new file; cite source; link from DNA if it changes a decision |
+| Application code | `src/`, `ml/` | one lane; talk via contracts |
+| Prompts / workflows / runbooks | `ops/` | — |
+| Derived spec / deck / scorecard | generate FROM the DNA; banner-tag "derived" | never authoritative |
+| Knowledge | `knowledge/obsidian-vault/` (truth) + `knowledge/code-lineage-vault/` (code) | refresh at every close (§8.6) |
 
 ## Run (PowerShell)
 
