@@ -22,3 +22,7 @@ continuity/last-test-results.xml
 .env
 *.key
 *.pem
+
+# large regenerable binaries — distribute via Drive, not git
+team-share/*.pptx
+team-share/*.pdf
