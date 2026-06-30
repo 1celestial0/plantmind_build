@@ -1,5 +1,5 @@
 # ROADMAP - PlantMind
-_Last updated: 2026-06-30 · paired with context v1.7_
+_Last updated: 2026-06-30 · paired with context v1.8_
 
 ## Growth ledger
 | Date | Context version | Items added | Items completed | Net delta | Open items total |
@@ -12,20 +12,15 @@ _Last updated: 2026-06-30 · paired with context v1.7_
 | 2026-06-30 | v1.5 | 0 | 2 | -2 | 1 |
 | 2026-06-30 | v1.6 | 0 | 1 | -1 | 0 |
 | 2026-06-30 | v1.7 | 5 | 8 | -3 | 5 |
+| 2026-06-30 | v1.8 | 0 | 2 | -2 | 3 |
 
 ## NOW
 - [ ] Lane 5: Judge Q&A bank + ROI calculator (`ops/runbooks/`) — HIGH priority, 9 days to hackathon
 - [ ] Wire GROQ_API_KEY env var for real LLM-backed RCA + executive brief
-- [ ] Outcome logger UI: wire `log_outcome()` into Audit Log page so operators can record outcomes
 
 ## NEXT
 - [ ] Lane 4: `deploy/databricks/` runbook + notebook skeleton
 - [ ] 2-tier testing framework: add `smoke` + `heavy` pytest markers to `tests/conftest.py`
-
-## NEXT
-- [ ] Lane 3: `src/dashboard/` mockups → Streamlit shell (read-only contracts)
-- [ ] Lane 5: judge Q&A bank + ROI calculator spec (`ops/runbooks/`)
-- [ ] Lane 4: `deploy/databricks/` runbook + notebook skeleton
 
 ## DEFERRED (demo polish — revisit before hackathon freeze)
 - [ ] Confirm v1 demo smoke + fix FORGE imports / RUL snapshot / `run_demo.py` (user skip 2026-06-30)
@@ -70,3 +65,5 @@ _Last updated: 2026-06-30 · paired with context v1.7_
 - [x] Live Feed toggle + speed selector (1x/5x/10x) with synthetic twin mode — 2026-06-30
 - [x] Groq LLM integration (llama-3.3-70b) with template fallback for RCA + executive brief — 2026-06-30
 - [x] RL feedback loop: `ml/feedback/outcome_logger.py` + Model Accuracy KPI in fleet overview — 2026-06-30
+- [x] Full UI overhaul: dark-theme CSS (styles.py), horizontal page_link nav, per-page sidebars, internal st.tabs() on all 4 pages — 2026-06-30
+- [x] RL Feedback tab: log_outcome() UI wired into Audit Log page (record selector + outcome form + Model Health tab) — 2026-06-30
