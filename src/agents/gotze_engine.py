@@ -15,7 +15,7 @@ from dataclasses import dataclass
 from src.contracts.ui import GotzeDecision
 
 # Weights — LOCKED_STATE §2
-_W = {
+_WEIGHTS = {
     "delta_p_failure": 0.35,
     "delta_downtime_cost": 0.25,
     "feasibility": 0.20,
@@ -39,11 +39,11 @@ class Intervention:
     @property
     def iis(self) -> float:
         return round(
-            _W["delta_p_failure"] * self.delta_p_failure
-            + _W["delta_downtime_cost"] * self.delta_downtime_cost
-            + _W["feasibility"] * self.feasibility
-            + _W["historical_success"] * self.historical_success
-            + _W["safety_risk_delta"] * self.safety_risk_delta,
+            _WEIGHTS["delta_p_failure"] * self.delta_p_failure
+            + _WEIGHTS["delta_downtime_cost"] * self.delta_downtime_cost
+            + _WEIGHTS["feasibility"] * self.feasibility
+            + _WEIGHTS["historical_success"] * self.historical_success
+            + _WEIGHTS["safety_risk_delta"] * self.safety_risk_delta,
             4,
         )
 
@@ -129,11 +129,11 @@ def run(
         # Nudge feasibility up for interventions that are fast when urgency is high
         effective_feasibility = min(1.0, cand.feasibility + 0.05 * urgency * cand.delta_p_failure)
         adjusted_iis = round(
-            _W["delta_p_failure"] * cand.delta_p_failure
-            + _W["delta_downtime_cost"] * cand.delta_downtime_cost
-            + _W["feasibility"] * effective_feasibility
-            + _W["historical_success"] * cand.historical_success
-            + _W["safety_risk_delta"] * cand.safety_risk_delta,
+            _WEIGHTS["delta_p_failure"] * cand.delta_p_failure
+            + _WEIGHTS["delta_downtime_cost"] * cand.delta_downtime_cost
+            + _WEIGHTS["feasibility"] * effective_feasibility
+            + _WEIGHTS["historical_success"] * cand.historical_success
+            + _WEIGHTS["safety_risk_delta"] * cand.safety_risk_delta,
             4,
         )
         scored.append((adjusted_iis, cand))

@@ -55,15 +55,29 @@ C:\Users\hp\Claude\Projects\PlantMind\
 
 ## 4. Code naming
 
-| Item | Convention | Example |
+### 4a. Symbol conventions
+
+| Symbol type | Convention | Example |
 |---|---|---|
-| Python modules | `snake_case.py` | `gotze_engine.py` |
-| Agents | `{role}.py` in `src/agents/` | `data_sentinel.py` |
-| Contracts | `src/contracts/{domain}.py` | `physics.py` |
-| API routes | `src/api/routes/{resource}.py` | `assets.py` |
-| Tests | `tests/test_{module}.py` | `test_gotze_iis.py` |
-| Legacy code | `src/legacy/{label}/` | `demo-v1-metagpt/` |
-| Config | `snake_case.yaml` | `plant_config.yaml` |
+| Classes, types/interfaces | `PascalCase` | `AssetHealthReport`, `GotzeDecision` |
+| Functions and variables | `snake_case` (Python/PEP 8) | `compute_health`, `asset_id` |
+| Module-level constants and env vars | `UPPER_SNAKE_CASE` | `CYCLES_PER_DAY`, `SAFETY_VETO_CEILING`, `_WEIGHTS` |
+
+> **Note:** Python requires `snake_case` for functions and variables per PEP 8. The generic camelCase convention applies to non-Python code (JS/TS) if added in future.
+
+### 4b. File and folder conventions
+
+| Item | Convention | Example | Exception |
+|---|---|---|---|
+| Files and folders | `kebab-case` | `plant-config.yaml`, `gen-team-docs.py` | Python modules (see below) |
+| Python modules (importable) | `snake_case.py` | `gotze_engine.py`, `data_sentinel.py` | Python cannot import modules with hyphens |
+| Agents | `{role}.py` in `src/agents/` | `data_sentinel.py` | — |
+| Contracts | `src/contracts/{domain}.py` | `physics.py` | — |
+| API routes | `src/api/routes/{resource}.py` | `assets.py` | — |
+| Tests | `tests/test_{module}.py` | `test_gotze_iis.py` | — |
+| Standalone scripts (not imported) | `kebab-case.py` | `smoke-test.py`, `gen-team-docs.py` | — |
+| Config files | `kebab-case.yaml` | `plant-config.yaml` | — |
+| Legacy code | `src/legacy/{label}/` | `demo-v1-metagpt/` | — |
 
 ---
 

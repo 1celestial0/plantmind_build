@@ -119,16 +119,16 @@ def test_gotze_no_vetoed_candidate_wins():
 
 def test_iis_formula_correct():
     """Spot-check IIS calculation on a known candidate."""
-    from src.agents.gotze_engine import Intervention, _W
+    from src.agents.gotze_engine import Intervention, _WEIGHTS
     c = Intervention(
         name="test", description="t",
         delta_p_failure=0.5, delta_downtime_cost=0.5,
         feasibility=0.5, historical_success=0.5, safety_risk_delta=0.5,
     )
     expected = (
-        _W["delta_p_failure"] * 0.5 + _W["delta_downtime_cost"] * 0.5
-        + _W["feasibility"] * 0.5 + _W["historical_success"] * 0.5
-        + _W["safety_risk_delta"] * 0.5
+        _WEIGHTS["delta_p_failure"] * 0.5 + _WEIGHTS["delta_downtime_cost"] * 0.5
+        + _WEIGHTS["feasibility"] * 0.5 + _WEIGHTS["historical_success"] * 0.5
+        + _WEIGHTS["safety_risk_delta"] * 0.5
     )
     assert abs(c.iis - expected) < 1e-6
 

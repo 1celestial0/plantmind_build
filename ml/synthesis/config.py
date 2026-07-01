@@ -1,6 +1,6 @@
 """Synthesis configuration — 30 assets × 20 signals × 3 failure modes × 500 cycles.
 
-All values here match plant_config.yaml. Sync manually if yaml changes.
+All values here match plant-config.yaml. Sync manually if yaml changes.
 """
 from __future__ import annotations
 from dataclasses import dataclass, field

@@ -132,7 +132,7 @@ def build():
          "Oracle needs Weibull health. Synthetic data enables live failure injection.",
          "ml/synthesis/generate_data.py; src/physics/weibull.py; calibrate from CMAPSS.",
          "Lane 2 — Sourav",
-         "H(t)=100·exp(−λ·S·t^β); 30 assets; plant_config.yaml",
+         "H(t)=100·exp(−λ·S·t^β); 30 assets; plant-config.yaml",
          "pump_07 cycle 400 → health<40, rul_days<14"),
         ("P2", "DataSentinel + AssetHealthOracle",
          "Feed Götze trigger. Sentinel flags only; Oracle always returns ci_95.",

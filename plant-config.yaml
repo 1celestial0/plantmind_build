@@ -1,4 +1,4 @@
-# plant_config.yaml — tunable thresholds (LOCKED_STATE §3)
+# plant-config.yaml — tunable thresholds (LOCKED_STATE §3)
 # Change values here without code edits. Do NOT change keys without VAULT UPDATE.
 
 triggers:
