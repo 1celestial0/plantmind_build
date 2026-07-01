@@ -143,4 +143,7 @@ Python 3.11 · FastAPI · Pydantic v2 · CrewAI + LangGraph · Groq Llama 3.3 70
 ```
 2026-07-01 | vault | PRODUCT LOCKED. Absorbed 3 Grok specs (Project/Databricks/UI). Added 2nd pillar (config-driven, §0/§9); IIS profiles §2a; 6th agent=MaintenanceScheduler §1; Two-Layer IP §9; UI light-palette realign §10; full-config-pipeline build scope + Hour-16 fallback, λ/β + RUL traps §7. | final deep-research pass; idea frozen
 ```
+```
+2026-07-01 | lane1 | Added `src/contracts/manifest.py` + `workorder.py`; seeded `config/plants/hero.yaml` with §6a physics. | unblock F-10 contracts and F-02 hero manifest
+```
 > Append one line per change. Format: YYYY-MM-DD | lane | what changed | why.
