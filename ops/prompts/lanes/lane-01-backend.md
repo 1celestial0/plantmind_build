@@ -8,8 +8,8 @@ Paste everything below the line into a **new chat** (Lane 1 only).
 LANE 1 — Backend Core & Agents.
 
 MISSION: Build the runnable Python backend — the shared PlantMindState, the
-LangGraph/CrewAI orchestrator, the 5 agents (DataSentinel, AssetHealthOracle,
-GötzeEngine, RootCauseAnalyst, ExecutiveSummarizer), the IIS scorer, FastAPI
+LangGraph/CrewAI orchestrator, the 6 agents (DataSentinel, AssetHealthOracle,
+GötzeEngine, RootCauseAnalyst, ExecutiveSummarizer, MaintenanceScheduler), the IIS scorer, FastAPI
 endpoints, and the SQLite audit writer.
 
 PRIMARY KB INPUTS: docs/architecture/06_AGENTS.md, 05_RUNTIME_AND_AGENTIC_WORKFLOW.md,

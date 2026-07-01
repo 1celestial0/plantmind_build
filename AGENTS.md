@@ -24,7 +24,7 @@
 One task = one lane. See `ops/ROUTING.md`.
 
 ## Locked facts (do not re-derive)
-- 5 agents: DataSentinel, AssetHealthOracle, GötzeEngine, RootCauseAnalyst, ExecutiveSummarizer
+- 6 agents: DataSentinel, AssetHealthOracle, GötzeEngine, RootCauseAnalyst, ExecutiveSummarizer, MaintenanceScheduler (fires only after human approval)
 - IIS formula and weights in `LOCKED_STATE.md` §2
 - Human approval required before action logged
 - Weibull ships first; PINN is stretch only

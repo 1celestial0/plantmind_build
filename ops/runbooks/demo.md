@@ -24,7 +24,7 @@ Source: migrate from `PlantMind_hckthn/08_DEMO_SCENARIOS.md`
 
 1. Healthy plant dashboard
 2. Inject failure (pump degrading)
-3. 5 agents fire → one best action + IIS
+3. 6 agents fire → one best action + IIS
 4. Human approves → audit updates
 5. Close: Götze line + Databricks partnership
 

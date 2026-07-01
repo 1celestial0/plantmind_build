@@ -6,7 +6,7 @@ Modular monorepo. Lanes communicate through `contracts/` only.
 |---|---|
 | `contracts/` | Pydantic schemas (= LOCKED_STATE §4) |
 | `api/routes/` | FastAPI HTTP endpoints |
-| `agents/` | 5 agents + orchestrator |
+| `agents/` | 6 agents + orchestrator |
 | `physics/` | Weibull, health, RUL |
 | `pipeline/` | LangGraph / workflow wiring |
 | `rag/` | ChromaDB + embeddings |
