@@ -1,0 +1,67 @@
+# Derived from / conforms to PROJECT-DNA.md and LOCKED_STATE.md §9.
+# Hero demo manifest: PUMP-001 is the centrifugal pump hero in gradual_wear mode.
+
+plant_id: PLANT-HERO-01
+
+asset_hierarchy:
+  - asset_id: PUMP-001
+    asset_class: pump
+    description: Hero centrifugal pump
+    failure_mode: gradual_wear
+  - asset_id: COMP-001
+    asset_class: compressor
+    description: On-stage compressor
+    failure_mode: fouling
+  - asset_id: MOTOR-001
+    asset_class: motor
+    description: On-stage drive motor
+    failure_mode: gradual_wear
+
+data_sources:
+  - name: main_historian
+    type: historian
+    uri: opc.tcp://plantmind-demo/historian
+
+tag_mapping:
+  - raw_tag: PMP001.VIB.RMS
+    signal_type: vibration_rms
+    unit: mm/s
+    failure_mode: gradual_wear
+  - raw_tag: PMP001.BRG.TEMP
+    signal_type: temperature_bearing
+    unit: C
+    failure_mode: gradual_wear
+  - raw_tag: PMP001.PRS.DELTA
+    signal_type: pressure_delta
+    unit: bar
+    failure_mode: seal_degradation
+  - raw_tag: CMP001.VIB.RMS
+    signal_type: vibration_rms
+    unit: mm/s
+    failure_mode: fouling
+  - raw_tag: MOTOR001.CUR.RMS
+    signal_type: current_rms
+    unit: A
+    failure_mode: overload
+
+# λ/β below come from LOCKED_STATE §6a and must never be replaced with naive example values.
+physics_model:
+  - asset_class: pump
+    lambda_: 1.49e-6
+    beta: 2.3
+    life_ref: 420
+  - asset_class: compressor
+    lambda_: 1.83e-5
+    beta: 1.9
+    life_ref: 400
+  - asset_class: motor
+    lambda_: 5.98e-8
+    beta: 2.8
+    life_ref: 450
+
+iis_profile: reliability_first
+
+triggers:
+  health_threshold: 40
+  rul_days_threshold: 14
+  critical_severity: true

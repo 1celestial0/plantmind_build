@@ -8,14 +8,14 @@ _Last updated: 2026-07-01 · paired with context v2.0 · backlog conforms to `PR
 |------|------------------|-------------|------------------|-----------|-------------------|
 | 2026-06-30 | v1.7 | 5 | 8 | -3 | 5 |
 | 2026-06-30 | v1.8 | 0 | 2 | -2 | 3 |
-| 2026-07-01 | v2.0 | 12 | 3 | +9 | 12 |
+| 2026-07-01 | v2.0 | 12 | 5 | +7 | 10 |
 
 ## NOW (Phase 0–1 · today–Jul 2)
 - [x] **DNA ratified → v1.0 LOCKED** (#1) — 2026-07-01
 - [x] **Doc consolidation + 2 Obsidian vaults + archive** (#3) — 2026-07-01
 - [ ] **Governance retrofit + git commit** (#4/#5) — *in progress*
-- [ ] 🔴 **Lock `src/contracts/`: `manifest.py` (Plant Config Manifest) + `workorder.py`** (#2, F-10) — blocks all lanes
-- [ ] `config/plants/hero.yaml` with §6a λ/β (#6, F-02 seed)
+- [x] 🔴 **Lock `src/contracts/`: `manifest.py` (Plant Config Manifest) + `workorder.py`** (#2, F-10) — 2026-07-01
+- [x] `config/plants/hero.yaml` with §6a λ/β (#6, F-02 seed) — 2026-07-01
 - [ ] ⚠️ Fix λ/β + RUL-unit traps in `src/physics/` (#7, F-05) — no cycle-30 collapse
 - [ ] 🔴 Start Databricks trial: workspace/cluster/Unity Catalog + Bronze (#8, F-12) — 14-day clock
 
