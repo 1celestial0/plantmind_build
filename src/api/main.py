@@ -23,7 +23,7 @@ from src.api.routes.health_check import router as health_router
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Warm up: ensure audit DB tables exist
-    from src.governance.audit import _connect
+    from src.shared.audit import _connect
     _connect().close()
     yield
 

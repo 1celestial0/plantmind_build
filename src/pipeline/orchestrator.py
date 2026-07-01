@@ -27,7 +27,7 @@ from src.agents import (
 )
 from src.agents.asset_health_oracle import should_trigger_gotze
 from src.contracts.audit import AuditRecord, LineageEntry
-from src.governance.audit import write_record
+from src.shared.audit import write_record
 from .schemas import PipelineResult, SensorReading
 
 

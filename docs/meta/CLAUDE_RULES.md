@@ -3,10 +3,10 @@
 ## UNIVERSAL (project-continuity)
 
 ### U1 — Read order at session start
-1. `00-START-HERE.md`
-2. `LOCKED_STATE.md`
-3. Highest `Chat Context/YYYY-MM-DD_vX.Y_project-context.md`
-4. `ROADMAP.md` NOW section
+1. `docs/meta/00-START-HERE.md`
+2. `docs/meta/LOCKED_STATE.md`
+3. Highest `docs/chat-context/YYYY-MM-DD_vX.Y_project-context.md`
+4. `docs/meta/ROADMAP.md` NOW section
 
 ### U2 — Checkpoint every ~15 messages
 > "Context check — worth a new context version now or at close?"

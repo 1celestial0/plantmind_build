@@ -6,7 +6,7 @@ from typing import Literal
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from src.governance.audit import get_record, list_records, update_decision
+from src.shared.audit import get_record, list_records, update_decision
 
 router = APIRouter()
 

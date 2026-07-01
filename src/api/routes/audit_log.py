@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 
-from src.governance.audit import get_record, list_records
+from src.shared.audit import get_record, list_records
 
 router = APIRouter()
 

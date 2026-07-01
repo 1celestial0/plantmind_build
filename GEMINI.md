@@ -4,10 +4,10 @@
 
 ## Before any task
 Read in order:
-1. `AI-OPERATING-SYSTEM.md`
-2. `LOCKED_STATE.md`
-3. Latest file in `Chat Context/` (highest vX.Y)
-4. `ROADMAP.md` — NOW section
+1. `docs/meta/AI-OPERATING-SYSTEM.md`
+2. `docs/meta/LOCKED_STATE.md`
+3. Latest file in `docs/chat-context/` (highest vX.Y)
+4. `docs/meta/ROADMAP.md` — NOW section
 
 ## Write permissions
 | Allowed | Forbidden |

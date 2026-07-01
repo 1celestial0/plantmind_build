@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import pandas as pd
 import streamlit as st
 
-from src.governance.audit import get_record, list_records
+from src.shared.audit import get_record, list_records
 from ml.feedback.outcome_logger import get_feedback_summary, log_outcome
 
 

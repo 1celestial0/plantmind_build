@@ -22,7 +22,7 @@ CONTRACTS YOU OWN: UI JSON (GötzeDecision + AssetHealthReport + ExecutiveBrief)
 and AuditRecord writer. Changes → 🔒 VAULT UPDATE.
 CONTRACTS YOU CONSUME: PhysicsModelOutput from src/contracts/physics.py.
 
-CODE HOME: src/agents/, src/api/, src/pipeline/, src/governance/
+CODE HOME: src/agents/, src/api/, src/pipeline/, src/shared/
 
 FIRST ACTION: scaffold PlantMindState + orchestrator skeleton + 5 agent stubs with
 correct signatures and graceful-failure wrappers. Import contracts from src/contracts/.

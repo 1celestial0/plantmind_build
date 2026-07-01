@@ -19,14 +19,14 @@
 | **Pain / competitive / ROI** | `docs/research/` | — | Phase 1–5 artifacts |
 | **Lane chat prompts** | `ops/prompts/lanes/` | `LOCKED_STATE` | One lane per chat |
 | **Agent workflow design** | `ops/workflows/` | `src/pipeline/` | LangGraph/CrewAI |
-| **Hooks / loops / feedback** | `ops/workflows/` | `src/governance/` | FeedbackLoopInterface |
+| **Hooks / loops / feedback** | `ops/workflows/` | `src/shared/` | FeedbackLoopInterface |
 | **Model API config** | `ops/MODEL-REGISTRY.md` | `src/api/` or agent files | — |
 | **Project-local skills** | `ops/skills/` | — | `/skill-name` |
 | **FastAPI routes** | `src/api/routes/` | `src/contracts/` | Lane 1 |
 | **Agent implementation** | `src/agents/` | `src/pipeline/` | Lane 1 |
 | **Physics / Weibull** | `src/physics/` | `ml/synthesis/` | Lane 2 |
-| **RAG / ChromaDB** | `src/rag/` | `ml/data/` | Lane 1 + 2 |
-| **Audit / governance** | `src/governance/` | `src/contracts/` | Lane 1 |
+| **RAG / ChromaDB** | `src/shared/` | `ml/data/` | Lane 1 + 2 |
+| **Audit / governance** | `src/shared/` | `src/contracts/` | Lane 1 |
 | **Orchestrator** | `src/pipeline/` | `ops/workflows/` | Lane 1 |
 | **Streamlit / dashboard** | `src/dashboard/` | `src/api/` (JSON only) | Lane 3 |
 | **Raw datasets** | `ml/data/raw/` | — | Lane 2 |
@@ -45,7 +45,7 @@
 
 | Lane | Name | Write folders | Read folders |
 |---|---|---|---|
-| **1** | Backend & Agents | `src/agents/`, `src/api/`, `src/pipeline/`, `src/governance/` | `LOCKED_STATE`, `docs/architecture/05-06` |
+| **1** | Backend & Agents | `src/agents/`, `src/api/`, `src/pipeline/`, `src/shared/` | `LOCKED_STATE`, `docs/architecture/05-06` |
 | **2** | Physics & ML | `src/physics/`, `ml/synthesis/`, `ml/training/`, `ml/data/` | `LOCKED_STATE §6a`, `docs/architecture/07` |
 | **3** | Dashboard & UI | `src/dashboard/`, `docs/design/` | `src/contracts/` (JSON shapes only) |
 | **4** | Databricks Port | `deploy/databricks/` | `docs/architecture/`, `docs/research/` |
@@ -60,7 +60,7 @@ HTTP Request
     → src/api/routes/{module}.py
     → src/agents/ or src/physics/ (business logic)
     → src/contracts/ (validate I/O)
-    → src/governance/ (audit write)
+    → src/shared/ (audit write)
     → Response JSON (matches LOCKED_STATE UI contract)
 ```
 

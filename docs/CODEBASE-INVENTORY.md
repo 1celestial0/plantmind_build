@@ -51,7 +51,7 @@
 | `src/agents/executive_summarizer.py` | P4 | new |
 | `src/pipeline/orchestrator.py` | P4 | `pipeline.py` (LangGraph) |
 | `src/api/routes/*.py` | P4 | new |
-| `src/governance/audit.py` | P4 | JSONL partial |
+| `src/shared/audit.py` | P4 | JSONL partial |
 | `src/dashboard/app.py` | P5 | `app.py` + approve UI |
 | `ml/synthesis/generate_data.py` | P1 | new |
 

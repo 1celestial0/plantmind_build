@@ -362,14 +362,14 @@ Closes the agentic story for judges: citations + leadership brief + machine-read
 
 | File | Purpose |
 |---|---|
-| `src/rag/seed_corpus.py` | Load 10–20 SOPs into ChromaDB |
-| `src/rag/retriever.py` | MiniLM embeddings + top-k |
+| `src/shared/seed_corpus.py` | Load 10–20 SOPs into ChromaDB |
+| `src/shared/retriever.py` | MiniLM embeddings + top-k |
 | `src/agents/root_cause_analyst.py` | RAG + causal chain |
 | `src/agents/executive_summarizer.py` | 3-bullet brief |
 | `src/api/main.py` | FastAPI app |
 | `src/api/routes/assets.py` | /assets, /health, /evaluate |
 | `src/api/routes/decisions.py` | /decision, /approve |
-| `src/governance/audit.py` | Append-only AuditRecord + hash chain |
+| `src/shared/audit.py` | Append-only AuditRecord + hash chain |
 | `src/pipeline/orchestrator.py` | LangGraph sequence |
 
 ### WHO
@@ -482,7 +482,7 @@ P0–P5 (or demo-v1-metagpt for T10 only)
 
 | Lane | Member | Folders they OWN (write) | Folders they READ only |
 |---|---|---|---|
-| 1 | Sourav | `src/agents/`, `src/api/`, `src/pipeline/`, `src/governance/` | `src/contracts/`, `src/physics/` |
+| 1 | Sourav | `src/agents/`, `src/api/`, `src/pipeline/`, `src/shared/` | `src/contracts/`, `src/physics/` |
 | 2 | Sourav | `src/physics/`, `ml/` | `src/contracts/` |
 | 3 | Member 2/3 | `src/dashboard/`, `docs/design/` | `src/contracts/` (JSON shapes) |
 | 4 | Sourav/team | `deploy/databricks/` | `docs/architecture/`, contracts |

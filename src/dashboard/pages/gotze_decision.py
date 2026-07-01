@@ -11,7 +11,7 @@ import streamlit as st
 
 from src.agents.gotze_engine import CANDIDATES
 from src.dashboard.failure_patterns import ASSET_CASCADE
-from src.governance.audit import update_decision
+from src.shared.audit import update_decision
 from src.pipeline.schemas import PipelineResult
 
 

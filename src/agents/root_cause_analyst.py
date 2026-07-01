@@ -7,7 +7,7 @@ import json
 import os
 from dataclasses import dataclass
 
-from src.rag.store import query_manuals
+from src.shared.rag_store import query_manuals
 
 # ── Groq client (optional) ────────────────────────────────────────────────────
 _GROQ = None

@@ -3,10 +3,10 @@
 **Workspace:** `C:\Users\hp\Claude\Projects\PlantMind\PlantMind_live`
 
 ## Read first (mandatory)
-1. `AI-OPERATING-SYSTEM.md`
-2. `LOCKED_STATE.md`
-3. Latest `Chat Context/*_project-context.md`
-4. `ROADMAP.md` NOW
+1. `docs/meta/AI-OPERATING-SYSTEM.md`
+2. `docs/meta/LOCKED_STATE.md`
+3. Latest `docs/chat-context/*_project-context.md`
+4. `docs/meta/ROADMAP.md` NOW
 5. If coding: `docs/IMPLEMENTATION-GUIDE-ULTRA.md` current phase
 
 ## Write rules

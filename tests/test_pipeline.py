@@ -66,7 +66,7 @@ def test_pipeline_invalid_asset_type():
 
 
 def test_pipeline_audit_record_persisted():
-    from src.governance.audit import get_record
+    from src.shared.audit import get_record
     result = pipeline_run(_reading(340.0, "pump"))
     record = get_record(result.audit_record_id)
     assert record is not None

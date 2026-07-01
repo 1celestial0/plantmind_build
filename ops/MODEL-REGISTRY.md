@@ -23,7 +23,7 @@
 
 1. **Add a row** to the table above with ID, provider, use case, lane, config key, fallback.
 2. **Add env var** to `.env.example` (never commit `.env`).
-3. **Create adapter** in `src/agents/_llm.py` or `src/rag/_embeddings.py` — one function per registry ID.
+3. **Create adapter** in `src/agents/_llm.py` or `src/shared/_embeddings.py` — one function per registry ID.
 4. **Document limits** (rate, cost, context window) in this file under the row.
 5. **Update** `LOCKED_STATE.md` §5 stack only if it's a locked production choice.
 

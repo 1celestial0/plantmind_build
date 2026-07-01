@@ -1,7 +1,7 @@
 # Lane 1 — Backend (living doc)
 
 **Prompt:** `ops/prompts/lanes/lane-01-backend.md`  
-**Code:** `src/agents/`, `src/api/`, `src/pipeline/`, `src/governance/`
+**Code:** `src/agents/`, `src/api/`, `src/pipeline/`, `src/shared/`
 
 ## Status: not started
 
